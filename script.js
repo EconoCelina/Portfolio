@@ -79,6 +79,8 @@ const i18nTranslations = {
     filter_cleaning: "Limpieza de Datos",
     tag_cleaning: "Limpieza de Datos",
     tag_data: "Análisis de Datos",
+    tag_data_bi: "Análisis de Datos & BI",
+    tag_econometrics: "Análisis Econométrico",
     tag_web: "Desarrollo Web",
     btn_view_project: "Ver Proyecto",
     btn_github: "Código en GitHub",
@@ -86,8 +88,8 @@ const i18nTranslations = {
 
     p1_title: "Limpieza & Normalización de Datasets",
     p1_desc: "Pipeline automatizado para depuración, detección de valores nulos/anómalos, reconocimiento de localidades y empresas utilizando Python (Pandas y Numpy).",
-    p2_title: "Dashboard Interactivo de Analítica Comercial",
-    p2_desc: "Plataforma interactiva para el procesamiento y visualización de ventas en tiempo real. Análisis exploratorio con Python (Pandas) y visualización estructurada.",
+    p2_title: "Análisis de la Industria Hidrocarburífera en Argentina (Petróleo & Gas)",
+    p2_desc: "Estudio econométrico y visualización interactiva sobre la evolución de la producción de gas y petróleo en Argentina, enfocado en el impacto de Vaca Muerta y el perfil de las principales cuencas y empresas operadoras.",
     p3_title: "E-Commerce Web Application (Vanilla JS)",
     p3_desc: "Tienda en línea completa construida sin frameworks. Incluye catálogo interactivo, filtro dinámico por productos, carrito de compras con persistencia en localStorage.",
     p4_title: "Pipeline ETL & Análisis de Tendencias de Mercado",
@@ -128,7 +130,7 @@ const i18nTranslations = {
     toast_desc: "Gracias por contactarte. Te responderé pronto.",
     footer_rights: "Todos los derechos reservados. Diseñado & desarrollado con Vanilla Web Stack.",
 
-    // Modal
+    // Modal Project 5
     modal_tag: "Limpieza & Transformación de Datos",
     modal_status: "Caso Real & Production-Ready",
     modal_main_title: 'Limpieza & Transformación de Datos: <br><span class="gradient-text-emerald">Perfil Exportador de Empresas Santafesinas</span>',
@@ -173,7 +175,37 @@ const i18nTranslations = {
     modal_blockB_intro: "Clasificación automatizada de productos según posición arancelaria NCM-SIM:",
     modal_copyB_btn: "Copiar Bloque B",
     modal_close_footer: "Cerrar Vista",
-    copied_text: "¡Copiado!"
+    copied_text: "¡Copiado!",
+
+    // Modal Petroleum & Gas
+    modal_petro_tag: "Análisis de Datos & Business Intelligence",
+    modal_petro_main_title: 'Análisis Integral de Producción de Petróleo y Gas en Argentina <br><span class="gradient-text">Evolución Hidrocarburífera & Vaca Muerta</span>',
+    modal_petro_tagline: "Proyecto de Data Analytics & Business Intelligence (Data-analyst-Herrera-Sosa)",
+    modal_petro_sec_dashboard: "Dashboard Interactivo de Producción de Gas en Argentina",
+    modal_petro_dashboard_caption: "Dashboard interactivo desarrollado en Power BI para explorar las tendencias de producción no convencional (Shale & Tight Gas vs. Convencional), la participación de mercado por cuenca (Neuquina, Golfo San Jorge, Austral) y el ranking de las principales empresas operadoras (YPF, Tecpetrol, Pan American Energy, entre otras).",
+    modal_petro_sec_bq: "Pregunta de Negocio & Objetivos",
+    modal_petro_bq_title: "Preguntas Clave del Análisis",
+    modal_petro_bq_1: "¿Cómo ha evolucionado la matriz energética no convencional en Argentina a partir del desarrollo de Vaca Muerta?",
+    modal_petro_bq_2: "¿Cuáles son las cuencas clave que impulsan el crecimiento de la oferta de gas natural y petróleo?",
+    modal_petro_bq_3: "¿Qué operadoras lideran la extracción y cómo varían las curvas de declinación por yacimiento?",
+    modal_petro_sec_pipeline: "Pipeline & Metodología de Datos",
+    modal_petro_step1_badge: "Paso 1",
+    modal_petro_step1_title: "Ingesta de Datos",
+    modal_petro_step1_desc: "Extracción de series históricas oficiales del Capítulo IV de la Secretaría de Energía de la Nación.",
+    modal_petro_step2_badge: "Paso 2",
+    modal_petro_step2_title: "Limpieza & ETL en Python",
+    modal_petro_step2_desc: "Normalización de nombres de yacimientos, tratamiento de registros nulos, estandarización de unidades de medida (Mm3/día para gas y m3/día para petróleo).",
+    modal_petro_step3_badge: "Paso 3",
+    modal_petro_step3_title: "Modelado de Datos",
+    modal_petro_step3_desc: "Estructuración de esquemas en estrella (Star Schema) en Power BI uniendo tablas de Hechos (Producción mensual) con Dimensiones (Empresas, Cuencas, Yacimientos, Ubicación Geográfica).",
+    modal_petro_step4_badge: "Paso 4",
+    modal_petro_step4_title: "Métricas DAX",
+    modal_petro_step4_desc: "Creación de medidas dinámicas para calcular variaciones interanuales (YoY), acumulados anuales (YTD) y porcentaje de participación no convencional.",
+    modal_petro_sec_value: "Valor para el Negocio & Conclusiones",
+    modal_petro_val1_title: "Impacto en Soberanía Energética",
+    modal_petro_val1_desc: "Permite evaluar el impacto de las inversiones estratégicas en Vaca Muerta sobre la soberanía energética y la balanza comercial de combustibles.",
+    modal_petro_val2_title: "Análisis Comparativo de Operadoras",
+    modal_petro_val2_desc: "Facilita el análisis comparativo del rendimiento entre empresas públicas y privadas en el sector hidrocarburífero argentino."
   },
   en: {
     meta_description: "Professional Data Analyst Portfolio. Projects, skills, and contact information.",
@@ -243,6 +275,8 @@ const i18nTranslations = {
     filter_cleaning: "Data Cleaning",
     tag_cleaning: "Data Cleaning",
     tag_data: "Data Analytics",
+    tag_data_bi: "Data Analytics & BI",
+    tag_econometrics: "Econometric Analysis",
     tag_web: "Web Development",
     btn_view_project: "View Project",
     btn_github: "GitHub Code",
@@ -250,8 +284,8 @@ const i18nTranslations = {
 
     p1_title: "Dataset Cleaning & Normalization",
     p1_desc: "Automated pipeline for data scrubbing, null/outlier detection, city and company entity recognition using Python (Pandas & NumPy).",
-    p2_title: "Interactive Business Analytics Dashboard",
-    p2_desc: "Interactive dashboard for real-time sales processing and visualization. Exploratory data analysis with Python (Pandas) and structured charting.",
+    p2_title: "Hydrocarbon Industry Analysis in Argentina (Oil & Gas)",
+    p2_desc: "Econometric study and interactive visualization on natural gas and crude oil production trends in Argentina, focusing on Vaca Muerta and top basins & operators.",
     p3_title: "E-Commerce Web Application (Vanilla JS)",
     p3_desc: "Full-featured online store built without frameworks. Includes interactive catalog, dynamic product filtering, and shopping cart persisted in localStorage.",
     p4_title: "ETL Pipeline & Market Trend Analysis",
@@ -292,7 +326,7 @@ const i18nTranslations = {
     toast_desc: "Thank you for reaching out. I'll get back to you soon.",
     footer_rights: "All rights reserved. Designed & developed with Vanilla Web Stack.",
 
-    // Modal
+    // Modal Project 5
     modal_tag: "Data Cleaning & Transformation",
     modal_status: "Real-world Case & Production-Ready",
     modal_main_title: 'Data Cleaning & Transformation: <br><span class="gradient-text-emerald">Exporter Profile of Santa Fe Companies</span>',
@@ -337,7 +371,37 @@ const i18nTranslations = {
     modal_blockB_intro: "Automated product classification based on NCM-SIM tariff code:",
     modal_copyB_btn: "Copy Block B",
     modal_close_footer: "Close View",
-    copied_text: "Copied!"
+    copied_text: "Copied!",
+
+    // Modal Petroleum & Gas
+    modal_petro_tag: "Data Analytics & Business Intelligence",
+    modal_petro_main_title: 'Comprehensive Oil & Gas Production Analysis in Argentina <br><span class="gradient-text">Hydrocarbon Trends & Vaca Muerta</span>',
+    modal_petro_tagline: "Data Analytics & Business Intelligence Project (Data-analyst-Herrera-Sosa)",
+    modal_petro_sec_dashboard: "Interactive Gas Production Dashboard in Argentina",
+    modal_petro_dashboard_caption: "Interactive dashboard built in Power BI to analyze unconventional production trends (Shale & Tight Gas vs. Conventional), basin market share (Neuquina, Golfo San Jorge, Austral), and ranking of top operator companies (YPF, Tecpetrol, Pan American Energy, among others).",
+    modal_petro_sec_bq: "Business Questions & Objectives",
+    modal_petro_bq_title: "Key Analytical Questions",
+    modal_petro_bq_1: "How has the unconventional energy matrix in Argentina evolved following the development of Vaca Muerta?",
+    modal_petro_bq_2: "Which key basins drive the growth of natural gas and crude oil supply?",
+    modal_petro_bq_3: "Which operators lead extraction and how do decline curves vary by field?",
+    modal_petro_sec_pipeline: "Data Pipeline & Methodology",
+    modal_petro_step1_badge: "Step 1",
+    modal_petro_step1_title: "Data Ingestion",
+    modal_petro_step1_desc: "Extraction of official historical time series from Chapter IV of the Secretariat of Energy of Argentina.",
+    modal_petro_step2_badge: "Step 2",
+    modal_petro_step2_title: "Cleaning & ETL in Python",
+    modal_petro_step2_desc: "Normalization of field names, null values handling, standardization of measurement units (Mm3/day for gas and m3/day for oil).",
+    modal_petro_step3_badge: "Step 3",
+    modal_petro_step3_title: "Data Modeling",
+    modal_petro_step3_desc: "Star Schema modeling in Power BI connecting Fact tables (Monthly Production) with Dimension tables (Companies, Basins, Fields, Geographic Location).",
+    modal_petro_step4_badge: "Step 4",
+    modal_petro_step4_title: "DAX Measures",
+    modal_petro_step4_desc: "Creation of dynamic DAX measures for Year-over-Year (YoY) variations, Year-to-Date (YTD) metrics, and unconventional market share percentages.",
+    modal_petro_sec_value: "Business Value & Conclusions",
+    modal_petro_val1_title: "Energy Sovereignty Impact",
+    modal_petro_val1_desc: "Provides evaluation of strategic investments in Vaca Muerta regarding energy sovereignty and fuel trade balance.",
+    modal_petro_val2_title: "Operators Comparative Analysis",
+    modal_petro_val2_desc: "Enables comparative performance benchmarking between state-owned and private corporations in the Argentine hydrocarbon sector."
   }
 };
 
@@ -350,6 +414,27 @@ function getCurrentLang() {
 function triggerDemoAlert() {
   const dict = i18nTranslations[currentLang] || i18nTranslations.es;
   alert(dict.demo_alert || 'Demostración interactiva en línea');
+}
+
+/* --------------------------------------------------------------------------
+   FUNCIONES GLOBALES DE CONTROL DE MODALES (OPEN / CLOSE)
+   -------------------------------------------------------------------------- */
+function openProjectModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (!modal) return;
+  modal.classList.add('is-active');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  const closeBtn = modal.querySelector('.modal-close-btn');
+  if (closeBtn) closeBtn.focus();
+}
+
+function closeProjectModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (!modal) return;
+  modal.classList.remove('is-active');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -745,51 +830,41 @@ function initDynamicYear() {
 }
 
 /* --------------------------------------------------------------------------
-   7. MODAL DETALLADO DE PROYECTO 5 (SISTEMA DE SANITIZACIÓN & NORMALIZACIÓN)
+   7. MODALES Y EVENT LISTENERS (PROYECTO 5 & PROYECTO PETRÓLEO Y GAS)
    -------------------------------------------------------------------------- */
 function initProjectModals() {
-  const openBtn = document.getElementById('open-project-5-btn');
-  const modal = document.getElementById('project-5-modal');
-  const closeBtnHeader = document.getElementById('close-modal-p5');
-  const closeBtnFooter = document.getElementById('close-modal-p5-footer');
+  const openBtnP5 = document.getElementById('open-project-5-btn');
+  const closeBtnP5Header = document.getElementById('close-modal-p5');
+  const closeBtnP5Footer = document.getElementById('close-modal-p5-footer');
 
-  if (!modal) return;
-
-  function openModal() {
-    modal.classList.add('is-active');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    if (closeBtnHeader) closeBtnHeader.focus();
-  }
-
-  function closeModal() {
-    modal.classList.remove('is-active');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    if (openBtn) openBtn.focus();
-  }
-
-  if (openBtn) {
-    openBtn.addEventListener('click', (e) => {
+  if (openBtnP5) {
+    openBtnP5.addEventListener('click', (e) => {
       e.preventDefault();
-      openModal();
+      openProjectModal('project-5-modal');
     });
   }
 
-  if (closeBtnHeader) closeBtnHeader.addEventListener('click', closeModal);
-  if (closeBtnFooter) closeBtnFooter.addEventListener('click', closeModal);
+  if (closeBtnP5Header) {
+    closeBtnP5Header.addEventListener('click', () => closeProjectModal('project-5-modal'));
+  }
+  if (closeBtnP5Footer) {
+    closeBtnP5Footer.addEventListener('click', () => closeProjectModal('project-5-modal'));
+  }
 
-  // Cerrar al hacer clic en el backdrop fuera del contenedor
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closeModal();
+  // Cerrar al hacer clic en el backdrop fuera del contenedor para cualquier modal
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal-overlay')) {
+      closeProjectModal(e.target.id);
     }
   });
 
-  // Cerrar con la tecla Escape
+  // Cerrar cualquier modal con la tecla Escape
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('is-active')) {
-      closeModal();
+    if (e.key === 'Escape') {
+      const activeModal = document.querySelector('.modal-overlay.is-active');
+      if (activeModal) {
+        closeProjectModal(activeModal.id);
+      }
     }
   });
 
