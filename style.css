@@ -1500,6 +1500,7 @@ h4 {
    MODAL DE DETALLES DE PROYECTO (GLASSMORPHISM & INTERACTIVO)
    ========================================================================== */
 
+.modal-backdrop,
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -1515,20 +1516,28 @@ h4 {
   justify-content: center;
   padding: 20px;
   opacity: 0;
+  pointer-events: none;
   visibility: hidden;
   transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+[data-theme="light"] .modal-backdrop,
 [data-theme="light"] .modal-overlay {
   background: rgba(15, 23, 42, 0.45);
 }
 
+.modal-backdrop.active,
+.modal-backdrop.is-active,
+.modal-overlay.active,
 .modal-overlay.is-active {
   opacity: 1;
+  pointer-events: auto;
   visibility: visible;
 }
 
+.modal-content,
 .modal-container {
+  position: relative;
   width: 100%;
   max-width: 920px;
   max-height: 90vh;
@@ -1543,6 +1552,13 @@ h4 {
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
+.modal-backdrop.active .modal-content,
+.modal-backdrop.active .modal-container,
+.modal-backdrop.is-active .modal-content,
+.modal-backdrop.is-active .modal-container,
+.modal-overlay.active .modal-content,
+.modal-overlay.active .modal-container,
+.modal-overlay.is-active .modal-content,
 .modal-overlay.is-active .modal-container {
   transform: scale(1) translateY(0);
 }
@@ -1592,6 +1608,7 @@ h4 {
   letter-spacing: 0.5px;
 }
 
+.modal-close,
 .modal-close-btn {
   display: flex;
   align-items: center;
@@ -1606,6 +1623,7 @@ h4 {
   cursor: pointer;
 }
 
+.modal-close:hover,
 .modal-close-btn:hover {
   background: rgba(239, 68, 68, 0.15);
   color: #ef4444;

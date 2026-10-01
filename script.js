@@ -419,22 +419,32 @@ function triggerDemoAlert() {
 /* --------------------------------------------------------------------------
    FUNCIONES GLOBALES DE CONTROL DE MODALES (OPEN / CLOSE)
    -------------------------------------------------------------------------- */
-function openProjectModal(modalId) {
+function openModal(modalId) {
   const modal = document.getElementById(modalId);
   if (!modal) return;
+  modal.classList.add('active');
   modal.classList.add('is-active');
   modal.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-  const closeBtn = modal.querySelector('.modal-close-btn');
+  document.body.style.overflow = 'hidden'; // Evita el scroll de fondo
+  const closeBtn = modal.querySelector('.modal-close, .modal-close-btn');
   if (closeBtn) closeBtn.focus();
 }
 
-function closeProjectModal(modalId) {
+function closeModal(modalId) {
   const modal = document.getElementById(modalId);
   if (!modal) return;
+  modal.classList.remove('active');
   modal.classList.remove('is-active');
   modal.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
+  document.body.style.overflow = 'auto'; // Restablece el scroll
+}
+
+function openProjectModal(modalId) {
+  openModal(modalId);
+}
+
+function closeProjectModal(modalId) {
+  closeModal(modalId);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -853,18 +863,18 @@ function initProjectModals() {
 
   // Cerrar al hacer clic en el backdrop fuera del contenedor para cualquier modal
   document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('modal-overlay')) {
-      closeProjectModal(e.target.id);
+    if (e.target.classList.contains('modal-backdrop') || e.target.classList.contains('modal-overlay')) {
+      closeModal(e.target.id);
     }
   });
 
   // Cerrar cualquier modal con la tecla Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      const activeModal = document.querySelector('.modal-overlay.is-active');
-      if (activeModal) {
-        closeProjectModal(activeModal.id);
-      }
+      const activeModals = document.querySelectorAll('.modal-backdrop.active, .modal-backdrop.is-active, .modal-overlay.active, .modal-overlay.is-active');
+      activeModals.forEach(modal => {
+        closeModal(modal.id);
+      });
     }
   });
 

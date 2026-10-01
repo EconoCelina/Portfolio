@@ -439,7 +439,7 @@
                 <span class="tag">Data Cleaning</span>
               </div>
               <div class="project-links">
-                <a href="#project-5-modal" class="btn-project btn-project-primary" id="open-project-5-btn">
+                <button class="btn-project btn-project-primary" onclick="openModal('modal-limpieza-datos')">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -447,7 +447,7 @@
                     <line x1="10" y1="14" x2="21" y2="3"></line>
                   </svg>
                   <span data-i18n="btn_view_project">Ver Proyecto</span>
-                </a>
+                </button>
                 <a href="https://github.com/EconoCelina/Perfil-Exportador-de-Santa-Fe" target="_blank"
                   rel="noopener noreferrer" class="btn-project btn-project-github">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -494,7 +494,7 @@
                 <span class="tag" data-i18n="tag_econometrics">Análisis Económico</span>
               </div>
               <div class="project-links">
-                <button class="btn-project btn-project-primary" onclick="openProjectModal('modal-petroleo-gas')">
+                <button class="btn-project btn-project-primary" onclick="openModal('modal-petroleo-gas')">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -906,9 +906,9 @@
     </div>
   </footer>
 
-  <!-- Modal Detallado: Proyecto 1 (Sistema de Sanitización & Normalización - Perfil Exportador Empresas Santafesinas) -->
-  <div id="project-5-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-p5-title">
-    <div class="modal-container glass-card">
+  <!-- Modal 1: Limpieza & Transformación de Datos -->
+  <div id="modal-limpieza-datos" class="modal-backdrop modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-p5-title">
+    <div class="modal-container modal-content glass-card">
 
       <!-- Modal Header -->
       <div class="modal-header">
@@ -924,8 +924,8 @@
           <span class="modal-status-badge" data-i18n="modal_status">Caso Real & Production-Ready</span>
         </div>
 
-        <button type="button" class="modal-close-btn" aria-label="Cerrar ventana de detalles" id="close-modal-p5"
-          data-i18n-aria="aria_modal_close">
+        <button type="button" class="modal-close-btn modal-close" aria-label="Cerrar ventana de detalles"
+          onclick="closeModal('modal-limpieza-datos')" data-i18n-aria="aria_modal_close">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1245,35 +1245,46 @@
 
       </div>
 
-      <!-- Modal Detallado: Proyecto Petróleo & Gas Argentina -->
-      <div id="modal-petroleo-gas" class="modal-overlay" aria-hidden="true" role="dialog"
-        aria-labelledby="modal-petro-title">
-        <div class="modal-container glass-card">
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick="closeModal('modal-limpieza-datos')"
+          data-i18n="modal_close_footer">
+          Cerrar Vista
+        </button>
+      </div>
 
-          <!-- Modal Header -->
-          <div class="modal-header">
-            <div class="modal-badge-group">
-              <span class="project-category-tag tag-cyan">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="18" y1="20" x2="18" y2="10"></line>
-                  <line x1="12" y1="20" x2="12" y2="4"></line>
-                  <line x1="6" y1="20" x2="6" y2="14"></line>
-                </svg>
-                <span data-i18n="modal_petro_tag">Análisis de Datos & Business Intelligence</span>
-              </span>
-              <span class="modal-status-badge" data-i18n="modal_status">Análisis Económico</span>
-            </div>
+    </div>
+  </div>
 
-            <button type="button" class="modal-close-btn" aria-label="Cerrar ventana de detalles"
-              onclick="closeProjectModal('modal-petroleo-gas')" data-i18n-aria="aria_modal_close">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            </button>
-          </div>
+  <!-- Modal 2: Análisis de Hidrocarburos / Petróleo & Gas -->
+  <div id="modal-petroleo-gas" class="modal-backdrop modal-overlay" aria-hidden="true" role="dialog"
+    aria-labelledby="modal-petro-title">
+    <div class="modal-container modal-content glass-card">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="modal-badge-group">
+          <span class="project-category-tag tag-cyan">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+            <span data-i18n="modal_petro_tag">Análisis de Datos & Business Intelligence</span>
+          </span>
+          <span class="modal-status-badge" data-i18n="modal_status">Análisis Económico</span>
+        </div>
+
+        <button type="button" class="modal-close-btn modal-close" aria-label="Cerrar ventana de detalles"
+          onclick="closeModal('modal-petroleo-gas')" data-i18n-aria="aria_modal_close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
 
           <!-- Modal Body Content -->
           <div class="modal-body">
@@ -1455,7 +1466,7 @@
               </svg>
               <span data-i18n="btn_github">Código en GitHub</span>
             </a>
-            <button type="button" class="btn btn-secondary" onclick="closeProjectModal('modal-petroleo-gas')"
+            <button type="button" class="btn btn-secondary" onclick="closeModal('modal-petroleo-gas')"
               data-i18n="modal_close_footer">
               Cerrar Vista
             </button>
