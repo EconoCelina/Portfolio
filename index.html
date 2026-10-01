@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio profesional de Analista de Datos. Proyectos, habilidades y contacto.">
+  <meta name="description" content="Portfolio profesional de Analista de Datos. Proyectos, habilidades y contacto." data-i18n-content="meta_description">
   <meta name="author" content=" Analista de Datos">
-  <title>Portfolio Profesional |Data Analyst</title>
+  <title data-i18n="doc_title">Portfolio Profesional | Data Analyst</title>
 
   <!-- Preconnect para Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,24 +28,31 @@
   <!-- Header / Navegación Sticky -->
   <header class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="#hero" class="brand-logo" aria-label="Ir al inicio">
+      <a href="#hero" class="brand-logo" aria-label="Ir al inicio" data-i18n-aria="aria_logo">
         <span class="brand-accent">&lt;</span>Economist<span class="brand-highlight">.Data</span><span
           class="brand-accent">
           /&gt;</span>
       </a>
 
       <!-- Menú de navegación de escritorio -->
-      <nav class="nav-menu" id="nav-menu" aria-label="Navegación principal">
+      <nav class="nav-menu" id="nav-menu" aria-label="Navegación principal" data-i18n-aria="aria_nav">
         <ul class="nav-list">
-          <li class="nav-item"><a href="#hero" class="nav-link active">Inicio</a></li>
-          <li class="nav-item"><a href="#about" class="nav-link">Sobre mí</a></li>
-          <li class="nav-item"><a href="#skills" class="nav-link">Habilidades</a></li>
-          <li class="nav-item"><a href="#projects" class="nav-link">Proyectos</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
+          <li class="nav-item"><a href="#hero" class="nav-link active" data-i18n="nav_home">Inicio</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link" data-i18n="nav_about">Sobre mí</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link" data-i18n="nav_skills">Habilidades</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link" data-i18n="nav_projects">Proyectos</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link" data-i18n="nav_contact">Contacto</a></li>
         </ul>
       </nav>
 
       <div class="nav-actions">
+        <!-- Botón Cambio de Idioma ES / EN -->
+        <button id="lang-toggle" class="lang-toggle-btn" aria-label="Switch to English" title="Cambiar idioma / Switch language">
+          <span class="lang-option lang-es active">ES</span>
+          <span class="lang-divider">/</span>
+          <span class="lang-option lang-en">EN</span>
+        </button>
+
         <!-- Botón Cambio de Tema Light/Dark -->
         <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar a modo claro" title="Cambiar tema">
           <!-- Icono Sol (Modo Claro) -->
@@ -70,7 +77,7 @@
 
         <!-- Botón Hamburguesa Móvil -->
         <button id="hamburger-btn" class="hamburger-btn" aria-label="Abrir menú de navegación" aria-expanded="false"
-          aria-controls="nav-menu">
+          aria-controls="nav-menu" data-i18n-aria="aria_hamburger">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
@@ -85,20 +92,20 @@
       <div class="container hero-grid">
         <div class="hero-content">
           <div class="badge-pill">
-            <span class="status-dot"></span> Disponible para nuevos proyectos
+            <span class="status-dot"></span> <span data-i18n="hero_badge">Disponible para nuevos proyectos</span>
           </div>
-          <h1 class="hero-title">
+          <h1 class="hero-title" data-i18n-html="hero_title">
             Data Analyst <br>
             <span class="gradient-text">& Economista</span>
           </h1>
-          <p class="hero-description">
+          <p class="hero-description" data-i18n="hero_desc">
             Analista de Datos con base en Economía y capacidades de Desarrollo Frontend. Combino el análisis
             cuantitativo,
             la modelación de datos y el desarrollo web para crear productos digitales con impacto de negocio.
           </p>
           <div class="hero-cta-group">
             <a href="#projects" class="btn btn-primary">
-              <span>Ver Proyectos</span>
+              <span data-i18n="hero_cta_projects">Ver Proyectos</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -106,24 +113,24 @@
               </svg>
             </a>
             <a href="#contact" class="btn btn-outline">
-              <span>Contactarme</span>
+              <span data-i18n="hero_cta_contact">Contactarme</span>
             </a>
           </div>
 
           <div class="hero-stats">
             <div class="stat-item">
               <span class="stat-number">+2</span>
-              <span class="stat-label">Años de Experiencia</span>
+              <span class="stat-label" data-i18n="hero_stat_1_label">Años de Experiencia</span>
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
               <span class="stat-number">100%</span>
-              <span class="stat-label">Vanilla JS & Clean Code</span>
+              <span class="stat-label" data-i18n="hero_stat_2_label">Vanilla JS & Clean Code</span>
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
               <span class="stat-number">Data</span>
-              <span class="stat-label">Python & SQL </span>
+              <span class="stat-label" data-i18n="hero_stat_3_label">Python & SQL</span>
             </div>
           </div>
         </div>
@@ -141,16 +148,16 @@
             <div class="code-card-body">
               <pre><code><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
   <span class="code-prop">name</span>: <span class="code-string">"Celina Sosa"</span>,
-  <span class="code-prop">role</span>: <span class="code-string">"Economista, Data Analyst & Frontend Developer"</span>,
+  <span class="code-prop">role</span>: <span class="code-string" id="code-card-role">"Economista, Data Analyst & Frontend Developer"</span>,
   <span class="code-prop">coreSkills</span>: [
     <span class="code-string">"Python"</span>, <span class="code-string">"SQL"</span>, <span class="code-string">"Power BI & Data Studio"</span>,
     <span class="code-string">"HTML"</span>, <span class="code-string">"CSS"</span>, <span class="code-string">"JavaScript"</span>
   ],
-  <span class="code-prop">passion</span>: <span class="code-string">"Construir la web inteligente"</span>,
+  <span class="code-prop">passion</span>: <span class="code-string" id="code-card-passion">"Construir la web inteligente"</span>,
   <span class="code-prop">status</span>: <span class="code-string">"Ready to Code & Analyze 🚀"</span>
 };
 
-<span class="code-comment">// Ejecutar transformación de datos a valor</span>
+<span class="code-comment" id="code-card-comment">// Ejecutar transformación de datos a valor</span>
 <span class="code-variable">developer</span>.<span class="code-method">buildImpactfulApps</span>();</code></pre>
             </div>
             <!-- Dynamic floating badges -->
@@ -179,8 +186,8 @@
     <section id="about" class="section">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-subtitle">Trayectoria & Enfoque</span>
-          <h2 class="section-title">Sobre Mí</h2>
+          <span class="section-subtitle" data-i18n="about_subtitle">Trayectoria & Enfoque</span>
+          <h2 class="section-title" data-i18n="about_title">Sobre Mí</h2>
           <div class="title-underline"></div>
         </div>
 
@@ -193,8 +200,8 @@
                 <polyline points="8 6 2 12 8 18"></polyline>
               </svg>
             </div>
-            <h3>Perspectiva Económica</h3>
-            <p>
+            <h3 data-i18n="about_card1_title">Perspectiva Económica</h3>
+            <p data-i18n="about_card1_desc">
               Mi formación en Economía me permite interpretar los datos dentro del contexto en el que se generan,
               incorporando una perspectiva micro y macroeconómica, modelos cuantitativos y una comprensión de los
               incentivos y relaciones que existen detrás de los números.
@@ -210,8 +217,8 @@
                 <line x1="6" y1="20" x2="6" y2="14"></line>
               </svg>
             </div>
-            <h3>Data & Business Intelligence</h3>
-            <p>
+            <h3 data-i18n="about_card2_title">Data & Business Intelligence</h3>
+            <p data-i18n="about_card2_desc">
               A partir de herramientas como Python, SQL, R y Power BI, transformo datos en información útil mediante
               procesos de limpieza, análisis, visualización y construcción
               de KPIs, buscando responder preguntas concretas y facilitar la toma de decisiones.
@@ -228,8 +235,8 @@
                 <line x1="15" y1="9" x2="15.01" y2="9"></line>
               </svg>
             </div>
-            <h3>Tecnología</h3>
-            <p>
+            <h3 data-i18n="about_card3_title">Tecnología</h3>
+            <p data-i18n="about_card3_desc">
               Me interesa especialmente cómo los avances tecnológicos están transformando la forma en que recopilamos,
               analizamos e interpretamos información, y cómo estas herramientas pueden potenciar el análisis económico.
             </p>
@@ -242,8 +249,8 @@
     <section id="skills" class="section bg-surface-alt">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-subtitle">Stack Tecnológico</span>
-          <h2 class="section-title">Mis Habilidades</h2>
+          <span class="section-subtitle" data-i18n="skills_subtitle">Stack Tecnológico</span>
+          <h2 class="section-title" data-i18n="skills_title">Mis Habilidades</h2>
           <div class="title-underline"></div>
         </div>
 
@@ -254,17 +261,17 @@
           <div class="skill-category-card glass-card">
             <div class="category-header">
               <span class="category-icon">📊</span>
-              <h3 class="category-title">Data Analytics & Science</h3>
+              <h3 class="category-title" data-i18n="skills_cat1_title">Data Analytics & Science</h3>
             </div>
             <div class="skills-list">
               <div class="skill-item">
                 <span class="skill-tech-name">Python & Pandas</span>
-                <span class="skill-desc">Data Cleaning <span class="skill-desc-bullet">·</span> Exploratory Analysis
+                <span class="skill-desc" data-i18n-html="skills_item_py_desc">Data Cleaning <span class="skill-desc-bullet">·</span> Exploratory Analysis
                   <span class="skill-desc-bullet">·</span> ETL</span>
               </div>
               <div class="skill-item">
-                <span class="skill-tech-name">Visualización de Datos</span>
-                <span class="skill-desc">Matplotlib <span class="skill-desc-bullet">·</span> Seaborn <span
+                <span class="skill-tech-name" data-i18n="skills_item_vis_title">Visualización de Datos</span>
+                <span class="skill-desc" data-i18n-html="skills_item_vis_desc">Matplotlib <span class="skill-desc-bullet">·</span> Seaborn <span
                     class="skill-desc-bullet">·</span> Dashboards</span>
               </div>
             </div>
@@ -274,17 +281,17 @@
           <div class="skill-category-card glass-card">
             <div class="category-header">
               <span class="category-icon">🗄️</span>
-              <h3 class="category-title">Bases de Datos & SQL</h3>
+              <h3 class="category-title" data-i18n="skills_cat2_title">Bases de Datos & SQL</h3>
             </div>
             <div class="skills-list">
               <div class="skill-item">
                 <span class="skill-tech-name">SQL</span>
-                <span class="skill-desc">Consultas Complejas <span class="skill-desc-bullet">·</span> Joins &
+                <span class="skill-desc" data-i18n-html="skills_item_sql_desc">Consultas Complejas <span class="skill-desc-bullet">·</span> Joins &
                   Aggregations <span class="skill-desc-bullet">·</span> Normalización</span>
               </div>
               <div class="skill-item">
-                <span class="skill-tech-name">Git & Control de Versiones</span>
-                <span class="skill-desc">Flujo de Ramas <span class="skill-desc-bullet">·</span> Commits <span
+                <span class="skill-tech-name" data-i18n="skills_item_git_title">Git & Control de Versiones</span>
+                <span class="skill-desc" data-i18n-html="skills_item_git_desc">Flujo de Ramas <span class="skill-desc-bullet">·</span> Commits <span
                     class="skill-desc-bullet">·</span> Repositorios GitHub</span>
               </div>
             </div>
@@ -294,17 +301,17 @@
           <div class="skill-category-card glass-card">
             <div class="category-header">
               <span class="category-icon">📈</span>
-              <h3 class="category-title">Economía & BI</h3>
+              <h3 class="category-title" data-i18n="skills_cat3_title">Economía & BI</h3>
             </div>
             <div class="skills-list">
               <div class="skill-item">
-                <span class="skill-tech-name">Análisis Económico</span>
-                <span class="skill-desc">Modelos Cuantitativos <span class="skill-desc-bullet">·</span> Interpretación
+                <span class="skill-tech-name" data-i18n="skills_item_econ_title">Análisis Económico</span>
+                <span class="skill-desc" data-i18n-html="skills_item_econ_desc">Modelos Cuantitativos <span class="skill-desc-bullet">·</span> Interpretación
                   de KPIs <span class="skill-desc-bullet">·</span> Toma de Decisiones</span>
               </div>
               <div class="skill-item">
                 <span class="skill-tech-name">Business Intelligence</span>
-                <span class="skill-desc">Power BI <span class="skill-desc-bullet">·</span> Reportes Financieros <span
+                <span class="skill-desc" data-i18n-html="skills_item_bi_desc">Power BI <span class="skill-desc-bullet">·</span> Reportes Financieros <span
                     class="skill-desc-bullet">·</span> Indicadores Clave</span>
               </div>
             </div>
@@ -314,17 +321,17 @@
           <div class="skill-category-card glass-card">
             <div class="category-header">
               <span class="category-icon">💻</span>
-              <h3 class="category-title">Frontend Development</h3>
+              <h3 class="category-title" data-i18n="skills_cat4_title">Frontend Development</h3>
             </div>
             <div class="skills-list">
               <div class="skill-item">
                 <span class="skill-tech-name">HTML & CSS</span>
-                <span class="skill-desc">Responsive Design <span class="skill-desc-bullet">·</span> Web Layouts <span
+                <span class="skill-desc" data-i18n-html="skills_item_fe_desc">Responsive Design <span class="skill-desc-bullet">·</span> Web Layouts <span
                     class="skill-desc-bullet">·</span> UI Development</span>
               </div>
               <div class="skill-item">
                 <span class="skill-tech-name">JavaScript</span>
-                <span class="skill-desc">DOM Manipulation <span class="skill-desc-bullet">·</span> Interactive
+                <span class="skill-desc" data-i18n-html="skills_item_js_desc">DOM Manipulation <span class="skill-desc-bullet">·</span> Interactive
                   Interfaces</span>
               </div>
             </div>
@@ -333,7 +340,7 @@
 
         <!-- Badges de Tecnologías -->
         <div class="tech-badges-wrapper">
-          <h4 class="badges-title">Tecnologías Principales</h4>
+          <h4 class="badges-title" data-i18n="skills_badges_title">Tecnologías Principales</h4>
           <div class="tech-badges-container">
             <span class="tech-badge"><i class="badge-dot"></i> Python</span>
             <span class="tech-badge"><i class="badge-dot"></i> SQL</span>
@@ -352,17 +359,17 @@
     <section id="projects" class="section">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-subtitle">Portafolio de Trabajos</span>
-          <h2 class="section-title">Proyectos Destacados</h2>
+          <span class="section-subtitle" data-i18n="projects_subtitle">Portafolio de Trabajos</span>
+          <h2 class="section-title" data-i18n="projects_title">Proyectos Destacados</h2>
           <div class="title-underline"></div>
         </div>
 
         <!-- Filtros de Proyectos -->
         <div class="project-filters">
-          <button class="filter-btn active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="web">Desarrollo Web</button>
-          <button class="filter-btn" data-filter="data">Análisis de Datos</button>
-          <button class="filter-btn" data-filter="cleaning">Limpieza de Datos</button>
+          <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Todos</button>
+          <button class="filter-btn" data-filter="web" data-i18n="filter_web">Desarrollo Web</button>
+          <button class="filter-btn" data-filter="data" data-i18n="filter_data">Análisis de Datos</button>
+          <button class="filter-btn" data-filter="cleaning" data-i18n="filter_cleaning">Limpieza de Datos</button>
         </div>
 
         <!-- Grilla de Proyectos -->
@@ -407,11 +414,11 @@
                     stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </div>
-              <span class="project-category-tag">Limpieza de Datos</span>
+              <span class="project-category-tag" data-i18n="tag_cleaning">Limpieza de Datos</span>
             </div>
             <div class="project-content">
-              <h3 class="project-title">Limpieza & Normalización de Datasets</h3>
-              <p class="project-description">
+              <h3 class="project-title" data-i18n="p1_title">Limpieza & Normalización de Datasets</h3>
+              <p class="project-description" data-i18n="p1_desc">
                 Pipeline automatizado para depuración, detección de valores nulos/anómalos, reconocimiento de
                 localidades y empresas utilizando Python (Pandas y Numpy).
               </p>
@@ -429,7 +436,7 @@
                     <polyline points="15 3 21 3 21 9"></polyline>
                     <line x1="10" y1="14" x2="21" y2="3"></line>
                   </svg>
-                  Ver Proyecto
+                  <span data-i18n="btn_view_project">Ver Proyecto</span>
                 </a>
                 <a href="https://github.com/EconoCelina/Perfil-Exportador-de-Santa-Fe" target="_blank"
                   rel="noopener noreferrer" class="btn-project btn-project-github">
@@ -439,7 +446,7 @@
                       d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
                     </path>
                   </svg>
-                  Código en GitHub
+                  <span data-i18n="btn_github">Código en GitHub</span>
                 </a>
               </div>
             </div>
@@ -471,11 +478,11 @@
                   <circle cx="265" cy="30" r="6" fill="#38bdf8" />
                 </svg>
               </div>
-              <span class="project-category-tag">Análisis de Datos</span>
+              <span class="project-category-tag" data-i18n="tag_data">Análisis de Datos</span>
             </div>
             <div class="project-content">
-              <h3 class="project-title">Dashboard Interactivo de Analítica Comercial</h3>
-              <p class="project-description">
+              <h3 class="project-title" data-i18n="p2_title">Dashboard Interactivo de Analítica Comercial</h3>
+              <p class="project-description" data-i18n="p2_desc">
                 Plataforma interactiva para el procesamiento y visualización de ventas en tiempo real. Análisis
                 exploratorio con Python (Pandas) y visualización estructurada.
               </p>
@@ -487,14 +494,14 @@
               </div>
               <div class="project-links">
                 <a href="#projects" class="btn-project btn-project-primary"
-                  onclick="alert('Demostración interactiva en línea'); return false;">
+                  onclick="triggerDemoAlert(); return false;">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     <polyline points="15 3 21 3 21 9"></polyline>
                     <line x1="10" y1="14" x2="21" y2="3"></line>
                   </svg>
-                  Ver Proyecto
+                  <span data-i18n="btn_view_project">Ver Proyecto</span>
                 </a>
                 <a href="https://github.com/Data-analyst-Herrera-Sosa/Argentina_petroleo_gas" target="_blank"
                   rel="noopener noreferrer" class="btn-project btn-project-github">
@@ -504,7 +511,7 @@
                       d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
                     </path>
                   </svg>
-                  Código en GitHub
+                  <span data-i18n="btn_github">Código en GitHub</span>
                 </a>
               </div>
             </div>
@@ -535,11 +542,11 @@
                   <rect x="150" y="120" width="80" height="20" rx="4" fill="#10b981" />
                 </svg>
               </div>
-              <span class="project-category-tag">Desarrollo Web</span>
+              <span class="project-category-tag" data-i18n="tag_web">Desarrollo Web</span>
             </div>
             <div class="project-content">
-              <h3 class="project-title">E-Commerce Web Application (Vanilla JS)</h3>
-              <p class="project-description">
+              <h3 class="project-title" data-i18n="p3_title">E-Commerce Web Application (Vanilla JS)</h3>
+              <p class="project-description" data-i18n="p3_desc">
                 Tienda en línea completa construida sin frameworks. Incluye catálogo interactivo, filtro dinámico por
                 productos, carrito de compras con persistencia en localStorage.
               </p>
@@ -551,14 +558,14 @@
               </div>
               <div class="project-links">
                 <a href="#projects" class="btn-project btn-project-primary"
-                  onclick="alert('Demostración interactiva en línea'); return false;">
+                  onclick="triggerDemoAlert(); return false;">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     <polyline points="15 3 21 3 21 9"></polyline>
                     <line x1="10" y1="14" x2="21" y2="3"></line>
                   </svg>
-                  Ver Proyecto
+                  <span data-i18n="btn_view_project">Ver Proyecto</span>
                 </a>
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer"
                   class="btn-project btn-project-github">
@@ -568,7 +575,7 @@
                       d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
                     </path>
                   </svg>
-                  Código en GitHub
+                  <span data-i18n="btn_github">Código en GitHub</span>
                 </a>
               </div>
             </div>
@@ -604,11 +611,11 @@
                     text-anchor="middle">Insight Viz</text>
                 </svg>
               </div>
-              <span class="project-category-tag">Análisis de Datos</span>
+              <span class="project-category-tag" data-i18n="tag_data">Análisis de Datos</span>
             </div>
             <div class="project-content">
-              <h3 class="project-title">Pipeline ETL & Análisis de Tendencias de Mercado</h3>
-              <p class="project-description">
+              <h3 class="project-title" data-i18n="p4_title">Pipeline ETL & Análisis de Tendencias de Mercado</h3>
+              <p class="project-description" data-i18n="p4_desc">
                 Solución automatizada de extracción y limpieza de datos con Python SQL alchemy, análisis estadístico
                 multivariable e informes dinámicos de proyección.
               </p>
@@ -620,14 +627,14 @@
               </div>
               <div class="project-links">
                 <a href="#projects" class="btn-project btn-project-primary"
-                  onclick="alert('Demostración interactiva en línea'); return false;">
+                  onclick="triggerDemoAlert(); return false;">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     <polyline points="15 3 21 3 21 9"></polyline>
                     <line x1="10" y1="14" x2="21" y2="3"></line>
                   </svg>
-                  Ver Proyecto
+                  <span data-i18n="btn_view_project">Ver Proyecto</span>
                 </a>
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer"
                   class="btn-project btn-project-github">
@@ -637,7 +644,7 @@
                       d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
                     </path>
                   </svg>
-                  Código en GitHub
+                  <span data-i18n="btn_github">Código en GitHub</span>
                 </a>
               </div>
             </div>
@@ -662,11 +669,11 @@
                     stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </div>
-              <span class="project-category-tag">Desarrollo Web</span>
+              <span class="project-category-tag" data-i18n="tag_web">Desarrollo Web</span>
             </div>
             <div class="project-content">
-              <h3 class="project-title">SaaS Product Landing & Analytics Interface</h3>
-              <p class="project-description">
+              <h3 class="project-title" data-i18n="p5_title">SaaS Product Landing & Analytics Interface</h3>
+              <p class="project-description" data-i18n="p5_desc">
                 Página de aterrizaje de alto rendimiento optimizada para conversión y SEO. Diseño responsive moderno con
                 glassmorphism y animaciones suaves en CSS/JS.
               </p>
@@ -678,14 +685,14 @@
               </div>
               <div class="project-links">
                 <a href="#projects" class="btn-project btn-project-primary"
-                  onclick="alert('Demostración interactiva en línea'); return false;">
+                  onclick="triggerDemoAlert(); return false;">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     <polyline points="15 3 21 3 21 9"></polyline>
                     <line x1="10" y1="14" x2="21" y2="3"></line>
                   </svg>
-                  Ver Proyecto
+                  <span data-i18n="btn_view_project">Ver Proyecto</span>
                 </a>
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer"
                   class="btn-project btn-project-github">
@@ -695,7 +702,7 @@
                       d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
                     </path>
                   </svg>
-                  Código en GitHub
+                  <span data-i18n="btn_github">Código en GitHub</span>
                 </a>
               </div>
             </div>
@@ -709,22 +716,22 @@
     <section id="contact" class="section bg-surface-alt">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-subtitle">¿Tienes un proyecto en mente?</span>
-          <h2 class="section-title">Hablemos y Hagámoslo Realidad</h2>
+          <span class="section-subtitle" data-i18n="contact_subtitle">¿Tienes un proyecto en mente?</span>
+          <h2 class="section-title" data-i18n="contact_title">Hablemos y Hagámoslo Realidad</h2>
           <div class="title-underline"></div>
         </div>
 
         <div class="contact-grid">
           <!-- Información de contacto -->
           <div class="contact-info-wrapper">
-            <h3 class="contact-subtitle">Información de Contacto</h3>
-            <p class="contact-text">
+            <h3 class="contact-subtitle" data-i18n="contact_info_subtitle">Información de Contacto</h3>
+            <p class="contact-text" data-i18n="contact_info_text">
               Estoy abierto a oportunidades laborales, proyectos freelance o colaboraciones de
               ciencia/análisis de datos.
             </p>
 
             <div class="contact-cards">
-              <a href="celinaabrilsosa@gmail.com" class="contact-card glass-card">
+              <a href="mailto:celinaabrilsosa@gmail.com" class="contact-card glass-card">
                 <div class="contact-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -733,7 +740,7 @@
                   </svg>
                 </div>
                 <div class="contact-details">
-                  <span class="contact-label">Correo Electrónico</span>
+                  <span class="contact-label" data-i18n="contact_email_label">Correo Electrónico</span>
                   <span class="contact-value">celinaabrilsosa@gmail.com</span>
                 </div>
               </a>
@@ -747,8 +754,8 @@
                   </svg>
                 </div>
                 <div class="contact-details">
-                  <span class="contact-label">Ubicación</span>
-                  <span class="contact-value">Disponible Presencial / Remoto / Híbrido</span>
+                  <span class="contact-label" data-i18n="contact_location_label">Ubicación</span>
+                  <span class="contact-value" data-i18n="contact_location_val">Disponible Presencial / Remoto / Híbrido</span>
                 </div>
               </div>
 
@@ -761,17 +768,17 @@
                   </svg>
                 </div>
                 <div class="contact-details">
-                  <span class="contact-label">Disponibilidad</span>
-                  <span class="contact-value">Respuesta en &lt; 24 Horas</span>
+                  <span class="contact-label" data-i18n="contact_avail_label">Disponibilidad</span>
+                  <span class="contact-value" data-i18n="contact_avail_val">Respuesta en &lt; 24 Horas</span>
                 </div>
               </div>
             </div>
 
             <div class="social-links-wrapper">
-              <h4 class="social-title">Sígueme en Redes</h4>
+              <h4 class="social-title" data-i18n="social_title">Sígueme en Redes</h4>
               <div class="social-icons">
                 <a href="https://github.com/EconoCelina" target="_blank" rel="noopener noreferrer"
-                  class="social-icon-btn" aria-label="Perfil de GitHub">
+                  class="social-icon-btn" aria-label="Perfil de GitHub" data-i18n-aria="aria_github">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path
@@ -780,7 +787,7 @@
                   </svg>
                 </a>
                 <a href="https://www.linkedin.com/in/celina-sosa-950881220" target="_blank" rel="noopener noreferrer"
-                  class="social-icon-btn" aria-label="Perfil de LinkedIn">
+                  class="social-icon-btn" aria-label="Perfil de LinkedIn" data-i18n-aria="aria_linkedin">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
@@ -788,7 +795,7 @@
                     <circle cx="4" cy="4" r="2"></circle>
                   </svg>
                 </a>
-                <a href="mailto:celinaabrilsosa@gmail.com" class="social-icon-btn" aria-label="Enviar Email Directo">
+                <a href="mailto:celinaabrilsosa@gmail.com" class="social-icon-btn" aria-label="Enviar Email Directo" data-i18n-aria="aria_email">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -803,47 +810,47 @@
           <div class="contact-form-container glass-card">
             <form id="contact-form" class="contact-form" novalidate>
               <div class="form-group">
-                <label for="name" class="form-label">Nombre Completo</label>
+                <label for="name" class="form-label" data-i18n="label_name">Nombre Completo</label>
                 <div class="input-wrapper">
                   <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre o empresa"
-                    required>
+                    data-i18n-placeholder="placeholder_name" required>
                   <span class="input-focus-border"></span>
                 </div>
                 <span class="error-message" id="name-error"></span>
               </div>
 
               <div class="form-group">
-                <label for="email" class="form-label">Correo Electrónico</label>
+                <label for="email" class="form-label" data-i18n="label_email">Correo Electrónico</label>
                 <div class="input-wrapper">
                   <input type="email" id="email" name="email" class="form-input" placeholder="ejemplo@correo.com"
-                    required>
+                    data-i18n-placeholder="placeholder_email" required>
                   <span class="input-focus-border"></span>
                 </div>
                 <span class="error-message" id="email-error"></span>
               </div>
 
               <div class="form-group">
-                <label for="subject" class="form-label">Asunto</label>
+                <label for="subject" class="form-label" data-i18n="label_subject">Asunto</label>
                 <div class="input-wrapper">
                   <input type="text" id="subject" name="subject" class="form-input"
-                    placeholder="Idea de proyecto / Consulta" required>
+                    placeholder="Idea de proyecto / Consulta" data-i18n-placeholder="placeholder_subject" required>
                   <span class="input-focus-border"></span>
                 </div>
                 <span class="error-message" id="subject-error"></span>
               </div>
 
               <div class="form-group">
-                <label for="message" class="form-label">Mensaje</label>
+                <label for="message" class="form-label" data-i18n="label_message">Mensaje</label>
                 <div class="input-wrapper">
                   <textarea id="message" name="message" class="form-input form-textarea" rows="4"
-                    placeholder="Describe brevemente tus requerimientos..." required></textarea>
+                    placeholder="Describe brevemente tus requerimientos..." data-i18n-placeholder="placeholder_message" required></textarea>
                   <span class="input-focus-border"></span>
                 </div>
                 <span class="error-message" id="message-error"></span>
               </div>
 
               <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
-                <span>Enviar Mensaje</span>
+                <span data-i18n="btn_submit">Enviar Mensaje</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -867,8 +874,8 @@
       </svg>
     </div>
     <div class="toast-body">
-      <span class="toast-title" id="toast-title">¡Mensaje Enviado!</span>
-      <span class="toast-desc" id="toast-desc">Gracias por contactarte. Te responderé pronto.</span>
+      <span class="toast-title" id="toast-title" data-i18n="toast_title">¡Mensaje Enviado!</span>
+      <span class="toast-desc" id="toast-desc" data-i18n="toast_desc">Gracias por contactarte. Te responderé pronto.</span>
     </div>
   </div>
 
@@ -876,7 +883,7 @@
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer-brand">
-        <a href="#hero" class="brand-logo">
+        <a href="#hero" class="brand-logo" aria-label="Ir al inicio" data-i18n-aria="aria_logo">
           <span class="brand-accent">&lt;</span>Economist<span class="brand-highlight">.Data</span><span
             class="brand-accent">
             /&gt;</span>
@@ -884,16 +891,15 @@
       </div>
 
       <div class="footer-links">
-        <a href="#hero">Inicio</a>
-        <a href="#about">Sobre mí</a>
-        <a href="#skills">Habilidades</a>
-        <a href="#projects">Proyectos</a>
-        <a href="#contact">Contacto</a>
+        <a href="#hero" data-i18n="nav_home">Inicio</a>
+        <a href="#about" data-i18n="nav_about">Sobre mí</a>
+        <a href="#skills" data-i18n="nav_skills">Habilidades</a>
+        <a href="#projects" data-i18n="nav_projects">Proyectos</a>
+        <a href="#contact" data-i18n="nav_contact">Contacto</a>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; <span id="current-year">2026</span> Todos los derechos reservados. Diseñado & desarrollado con Vanilla
-          Web Stack.</p>
+        <p>&copy; <span id="current-year">2026</span> <span data-i18n="footer_rights">Todos los derechos reservados. Diseñado & desarrollado con Vanilla Web Stack.</span></p>
       </div>
     </div>
   </footer>
@@ -911,12 +917,12 @@
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
               <polyline points="22 4 12 14.01 9 11.01"></polyline>
             </svg>
-            Limpieza & Transformación de Datos
+            <span data-i18n="modal_tag">Limpieza & Transformación de Datos</span>
           </span>
-          <span class="modal-status-badge">Caso Real & Production-Ready</span>
+          <span class="modal-status-badge" data-i18n="modal_status">Caso Real & Production-Ready</span>
         </div>
 
-        <button type="button" class="modal-close-btn" aria-label="Cerrar ventana de detalles" id="close-modal-p5">
+        <button type="button" class="modal-close-btn" aria-label="Cerrar ventana de detalles" id="close-modal-p5" data-i18n-aria="aria_modal_close">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -930,11 +936,11 @@
 
         <!-- 1. ENCABEZADO Y BADGES -->
         <div class="modal-hero-section">
-          <h2 id="modal-p5-title" class="modal-main-title">
+          <h2 id="modal-p5-title" class="modal-main-title" data-i18n-html="modal_main_title">
             Limpieza & Transformación de Datos: <br>
             <span class="gradient-text-emerald">Perfil Exportador de Empresas Santafesinas</span>
           </h2>
-          <p class="modal-tagline">
+          <p class="modal-tagline" data-i18n="modal_tagline">
             Sistema de Sanitización, Normalización y Consolidación de Datasets de Comercio Exterior
           </p>
 
@@ -965,8 +971,8 @@
             </div>
             <div class="kpi-content">
               <span class="kpi-number">81</span>
-              <span class="kpi-label">Archivos Procesados</span>
-              <span class="kpi-subtext">Datasets Excel de origen (Softrade)</span>
+              <span class="kpi-label" data-i18n="modal_kpi1_label">Archivos Procesados</span>
+              <span class="kpi-subtext" data-i18n="modal_kpi1_sub">Datasets Excel de origen (Softrade)</span>
             </div>
           </div>
 
@@ -980,8 +986,8 @@
             </div>
             <div class="kpi-content">
               <span class="kpi-number">ETL Lead</span>
-              <span class="kpi-label">Rol en el Proyecto</span>
-              <span class="kpi-subtext">Limpieza, Transformación e Integración</span>
+              <span class="kpi-label" data-i18n="modal_kpi2_label">Rol en el Proyecto</span>
+              <span class="kpi-subtext" data-i18n="modal_kpi2_sub">Limpieza, Transformación e Integración</span>
             </div>
           </div>
 
@@ -995,8 +1001,8 @@
             </div>
             <div class="kpi-content">
               <span class="kpi-number">100%</span>
-              <span class="kpi-label">Resultado Consolidado</span>
-              <span class="kpi-subtext">"Fuente de Verdad" lista para Power BI</span>
+              <span class="kpi-label" data-i18n="modal_kpi3_label">Resultado Consolidado</span>
+              <span class="kpi-subtext" data-i18n="modal_kpi3_sub">"Fuente de Verdad" lista para Power BI</span>
             </div>
           </div>
         </div>
@@ -1010,13 +1016,13 @@
               <line x1="12" y1="16" x2="12" y2="12"></line>
               <line x1="12" y1="8" x2="12.01" y2="8"></line>
             </svg>
-            Contexto del Negocio & Objetivo
+            <span data-i18n="modal_sec1_title">Contexto del Negocio & Objetivo</span>
           </h3>
 
           <div class="modal-grid-2col">
             <div class="modal-text-block">
-              <h4 class="block-subtitle">Contexto</h4>
-              <p>
+              <h4 class="block-subtitle" data-i18n="modal_sec1_context_sub">Contexto</h4>
+              <p data-i18n="modal_sec1_context_p">
                 Preparación y transformación de datos de comercio exterior para construir una base confiable de
                 exportaciones de empresas de la provincia de Santa Fe a partir de reportes descargados de Softrade con
                 inconsistencias, problemas de codificación y tildes.
@@ -1024,8 +1030,8 @@
             </div>
 
             <div class="modal-text-block">
-              <h4 class="block-subtitle">Objetivo del Proyecto</h4>
-              <p>
+              <h4 class="block-subtitle" data-i18n="modal_sec1_obj_sub">Objetivo del Proyecto</h4>
+              <p data-i18n="modal_sec1_obj_p">
                 Construir una base consolidada, limpia y consistente aplicando procesos reproducibles de filtrado,
                 validación y transformación.
               </p>
@@ -1042,8 +1048,8 @@
               </svg>
             </div>
             <div class="bq-content">
-              <span class="bq-title">Pregunta de Negocio</span>
-              <p class="bq-text">
+              <span class="bq-title" data-i18n="modal_bq_title">Pregunta de Negocio</span>
+              <p class="bq-text" data-i18n="modal_bq_p">
                 ¿Cuál es el perfil exportador de las empresas santafesinas y qué características de sus exportaciones
                 pueden identificarse a partir de la información de comercio exterior?
               </p>
@@ -1058,62 +1064,62 @@
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
             </svg>
-            Proceso de Trabajo (Paso a Paso)
+            <span data-i18n="modal_sec2_title">Proceso de Trabajo (Paso a Paso)</span>
           </h3>
 
           <div class="workflow-timeline">
 
             <div class="workflow-step">
-              <div class="step-badge">Paso 1</div>
+              <div class="step-badge" data-i18n="modal_step1_badge">Paso 1</div>
               <div class="step-content">
-                <h4 class="step-title">Preparación de Datos</h4>
-                <p class="step-desc">Ejecución de 2 notebooks de Python en VS Code con <code>pandas</code>,
+                <h4 class="step-title" data-i18n="modal_step1_title">Preparación de Datos</h4>
+                <p class="step-desc" data-i18n-html="modal_step1_desc">Ejecución de 2 notebooks de Python en VS Code con <code>pandas</code>,
                   <code>unidecode</code> y <code>openpyxl</code>.
                 </p>
               </div>
             </div>
 
             <div class="workflow-step">
-              <div class="step-badge">Paso 2</div>
+              <div class="step-badge" data-i18n="modal_step2_badge">Paso 2</div>
               <div class="step-content">
-                <h4 class="step-title">Filtrado por Localidad</h4>
-                <p class="step-desc">Conversión a mayúsculas, mapeo de variantes de escritura y consolidación de 81
+                <h4 class="step-title" data-i18n="modal_step2_title">Filtrado por Localidad</h4>
+                <p class="step-desc" data-i18n-html="modal_step2_desc">Conversión a mayúsculas, mapeo de variantes de escritura y consolidación de 81
                   archivos en <code>Base_Unificada.xlsx</code>.</p>
               </div>
             </div>
 
             <div class="workflow-step">
-              <div class="step-badge">Paso 3</div>
+              <div class="step-badge" data-i18n="modal_step3_badge">Paso 3</div>
               <div class="step-content">
-                <h4 class="step-title">Corrección de Localidades</h4>
-                <p class="step-desc">Uso de archivo auxiliar <code>Empresas modificadas.xlsx</code> para resolver casos
+                <h4 class="step-title" data-i18n="modal_step3_title">Corrección de Localidades</h4>
+                <p class="step-desc" data-i18n-html="modal_step3_desc">Uso de archivo auxiliar <code>Empresas modificadas.xlsx</code> para resolver casos
                   con casas matrices en otras provincias.</p>
               </div>
             </div>
 
             <div class="workflow-step">
-              <div class="step-badge">Paso 4</div>
+              <div class="step-badge" data-i18n="modal_step4_badge">Paso 4</div>
               <div class="step-content">
-                <h4 class="step-title">Filtrado por Empresa</h4>
-                <p class="step-desc">Lista manual validada de exportadores con variantes de razón social y errores
+                <h4 class="step-title" data-i18n="modal_step4_title">Filtrado por Empresa</h4>
+                <p class="step-desc" data-i18n="modal_step4_desc">Lista manual validada de exportadores con variantes de razón social y errores
                   tipográficos.</p>
               </div>
             </div>
 
             <div class="workflow-step">
-              <div class="step-badge">Paso 5</div>
+              <div class="step-badge" data-i18n="modal_step5_badge">Paso 5</div>
               <div class="step-content">
-                <h4 class="step-title">Cruce, Validación y Control de Duplicados</h4>
-                <p class="step-desc">Comparación de salidas de localidad y empresa para evitar duplicación de registros.
+                <h4 class="step-title" data-i18n="modal_step5_title">Cruce, Validación y Control de Duplicados</h4>
+                <p class="step-desc" data-i18n="modal_step5_desc">Comparación de salidas de localidad y empresa para evitar duplicación de registros.
                 </p>
               </div>
             </div>
 
             <div class="workflow-step">
-              <div class="step-badge">Paso 6</div>
+              <div class="step-badge" data-i18n="modal_step6_badge">Paso 6</div>
               <div class="step-content">
-                <h4 class="step-title">Transformación y Clasificación NCM</h4>
-                <p class="step-desc">Clasificación automatizada en Primario, MOA, MOI y Energía mediante el Nomenclador
+                <h4 class="step-title" data-i18n="modal_step6_title">Transformación y Clasificación NCM</h4>
+                <p class="step-desc" data-i18n="modal_step6_desc">Clasificación automatizada en Primario, MOA, MOI y Energía mediante el Nomenclador
                   Mercosur.</p>
               </div>
             </div>
@@ -1129,13 +1135,13 @@
               <polyline points="16 18 22 12 16 6"></polyline>
               <polyline points="8 6 2 12 8 18"></polyline>
             </svg>
-            Snippets de Código Python
+            <span data-i18n="modal_sec3_title">Snippets de Código Python</span>
           </h3>
 
           <!-- Bloque A -->
           <div class="code-snippet-container">
             <div class="modal-section-header-flex">
-              <h4 class="block-subtitle-code">
+              <h4 class="block-subtitle-code" data-i18n="modal_blockA_subtitle">
                 Bloque A: Algoritmo de Filtrado y Unificación de 81 Archivos Excel
               </h4>
               <button type="button" class="copy-code-btn" id="copy-code-p5-a" title="Copiar Bloque A al portapapeles">
@@ -1144,11 +1150,11 @@
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
-                <span class="copy-text">Copiar Bloque A</span>
+                <span class="copy-text" data-i18n="modal_copyA_btn">Copiar Bloque A</span>
               </button>
             </div>
 
-            <p class="code-intro-text">
+            <p class="code-intro-text" data-i18n="modal_blockA_intro">
               Procesamiento iterativo de datasets descargados de Softrade, depuración de localidades y consolidación
               masiva:
             </p>
@@ -1181,7 +1187,7 @@
           <!-- Bloque B -->
           <div class="code-snippet-container" style="margin-top: 24px;">
             <div class="modal-section-header-flex">
-              <h4 class="block-subtitle-code">
+              <h4 class="block-subtitle-code" data-i18n="modal_blockB_subtitle">
                 Bloque B: Función de Clasificación por Sector según NCM (Primario, MOA, MOI, Energía)
               </h4>
               <button type="button" class="copy-code-btn" id="copy-code-p5-b" title="Copiar Bloque B al portapapeles">
@@ -1190,11 +1196,11 @@
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
-                <span class="copy-text">Copiar Bloque B</span>
+                <span class="copy-text" data-i18n="modal_copyB_btn">Copiar Bloque B</span>
               </button>
             </div>
 
-            <p class="code-intro-text">
+            <p class="code-intro-text" data-i18n="modal_blockB_intro">
               Clasificación automatizada de productos según posición arancelaria NCM-SIM:
             </p>
 
@@ -1231,15 +1237,13 @@
 
       <!-- Modal Footer -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" id="close-modal-p5-footer">
+        <button type="button" class="btn btn-secondary" id="close-modal-p5-footer" data-i18n="modal_close_footer">
           Cerrar Vista
         </button>
       </div>
 
     </div>
   </div>
-
-
 
   <!-- JavaScript Principal -->
   <script src="script.js"></script>

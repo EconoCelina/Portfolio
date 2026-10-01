@@ -1,13 +1,360 @@
 /**
  * ==========================================================================
  * PORTFOLIO PROFESIONAL - JAVASCRIPT NATIVO (VANILLA ES6+)
- * Funcionalidades: Theme Toggle, Mobile Nav, Smooth Scroll, Projects Filter,
- * Form Validation & Toast Notification, Dynamic Year.
+ * Funcionalidades: Language Toggle (ES/EN), Theme Toggle, Mobile Nav,
+ * Smooth Scroll, Projects Filter, Form Validation & Toast Notification,
+ * Dynamic Year, Modal & Clipboard.
  * ==========================================================================
  */
 
+/* --------------------------------------------------------------------------
+   DICCIONARIO DE TRADUCCIONES (ESPAÑOL / INGLÉS)
+   -------------------------------------------------------------------------- */
+const i18nTranslations = {
+  es: {
+    meta_description: "Portfolio profesional de Analista de Datos. Proyectos, habilidades y contacto.",
+    doc_title: "Portfolio Profesional | Data Analyst",
+    nav_home: "Inicio",
+    nav_about: "Sobre mí",
+    nav_skills: "Habilidades",
+    nav_projects: "Proyectos",
+    nav_contact: "Contacto",
+    aria_logo: "Ir al inicio",
+    aria_nav: "Navegación principal",
+    aria_hamburger: "Abrir menú de navegación",
+    aria_github: "Perfil de GitHub",
+    aria_linkedin: "Perfil de LinkedIn",
+    aria_email: "Enviar Email Directo",
+    aria_modal_close: "Cerrar ventana de detalles",
+
+    // Hero Section
+    hero_badge: "Disponible para nuevos proyectos",
+    hero_title: 'Data Analyst <br><span class="gradient-text">& Economista</span>',
+    hero_desc: "Analista de Datos con base en Economía y capacidades de Desarrollo Frontend. Combino el análisis cuantitativo, la modelación de datos y el desarrollo web para crear productos digitales con impacto de negocio.",
+    hero_cta_projects: "Ver Proyectos",
+    hero_cta_contact: "Contactarme",
+    hero_stat_1_label: "Años de Experiencia",
+    hero_stat_2_label: "Vanilla JS & Clean Code",
+    hero_stat_3_label: "Python & SQL",
+    code_card_role: "Economista, Data Analyst & Frontend Developer",
+    code_card_passion: "Construir la web inteligente",
+    code_card_comment: "// Ejecutar transformación de datos a valor",
+
+    // About Section
+    about_subtitle: "Trayectoria & Enfoque",
+    about_title: "Sobre Mí",
+    about_card1_title: "Perspectiva Económica",
+    about_card1_desc: "Mi formación en Economía me permite interpretar los datos dentro del contexto en el que se generan, incorporando una perspectiva micro y macroeconómica, modelos cuantitativos y una comprensión de los incentivos y relaciones que existen detrás de los números.",
+    about_card2_title: "Data & Business Intelligence",
+    about_card2_desc: "A partir de herramientas como Python, SQL, R y Power BI, transformo datos en información útil mediante procesos de limpieza, análisis, visualización y construcción de KPIs, buscando responder preguntas concretas y facilitar la toma de decisiones.",
+    about_card3_title: "Tecnología",
+    about_card3_desc: "Me interesa especialmente cómo los avances tecnológicos están transformando la forma en que recopilamos, analizamos e interpretamos información, y cómo estas herramientas pueden potenciar el análisis económico.",
+
+    // Skills Section
+    skills_subtitle: "Stack Tecnológico",
+    skills_title: "Mis Habilidades",
+    skills_cat1_title: "Data Analytics & Science",
+    skills_item_py_desc: 'Data Cleaning <span class="skill-desc-bullet">·</span> Exploratory Analysis <span class="skill-desc-bullet">·</span> ETL',
+    skills_item_vis_title: "Visualización de Datos",
+    skills_item_vis_desc: 'Matplotlib <span class="skill-desc-bullet">·</span> Seaborn <span class="skill-desc-bullet">·</span> Dashboards',
+    skills_cat2_title: "Bases de Datos & SQL",
+    skills_item_sql_desc: 'Consultas Complejas <span class="skill-desc-bullet">·</span> Joins & Aggregations <span class="skill-desc-bullet">·</span> Normalización',
+    skills_item_git_title: "Git & Control de Versiones",
+    skills_item_git_desc: 'Flujo de Ramas <span class="skill-desc-bullet">·</span> Commits <span class="skill-desc-bullet">·</span> Repositorios GitHub',
+    skills_cat3_title: "Economía & BI",
+    skills_item_econ_title: "Análisis Económico",
+    skills_item_econ_desc: 'Modelos Cuantitativos <span class="skill-desc-bullet">·</span> Interpretación de KPIs <span class="skill-desc-bullet">·</span> Toma de Decisiones',
+    skills_item_bi_desc: 'Power BI <span class="skill-desc-bullet">·</span> Reportes Financieros <span class="skill-desc-bullet">·</span> Indicadores Clave',
+    skills_cat4_title: "Frontend Development",
+    skills_item_fe_desc: 'Responsive Design <span class="skill-desc-bullet">·</span> Web Layouts <span class="skill-desc-bullet">·</span> UI Development',
+    skills_item_js_desc: 'DOM Manipulation <span class="skill-desc-bullet">·</span> Interactive Interfaces',
+    skills_badges_title: "Tecnologías Principales",
+
+    // Projects Section
+    projects_subtitle: "Portafolio de Trabajos",
+    projects_title: "Proyectos Destacados",
+    filter_all: "Todos",
+    filter_web: "Desarrollo Web",
+    filter_data: "Análisis de Datos",
+    filter_cleaning: "Limpieza de Datos",
+    tag_cleaning: "Limpieza de Datos",
+    tag_data: "Análisis de Datos",
+    tag_web: "Desarrollo Web",
+    btn_view_project: "Ver Proyecto",
+    btn_github: "Código en GitHub",
+    demo_alert: "Demostración interactiva en línea",
+
+    p1_title: "Limpieza & Normalización de Datasets",
+    p1_desc: "Pipeline automatizado para depuración, detección de valores nulos/anómalos, reconocimiento de localidades y empresas utilizando Python (Pandas y Numpy).",
+    p2_title: "Dashboard Interactivo de Analítica Comercial",
+    p2_desc: "Plataforma interactiva para el procesamiento y visualización de ventas en tiempo real. Análisis exploratorio con Python (Pandas) y visualización estructurada.",
+    p3_title: "E-Commerce Web Application (Vanilla JS)",
+    p3_desc: "Tienda en línea completa construida sin frameworks. Incluye catálogo interactivo, filtro dinámico por productos, carrito de compras con persistencia en localStorage.",
+    p4_title: "Pipeline ETL & Análisis de Tendencias de Mercado",
+    p4_desc: "Solución automatizada de extracción y limpieza de datos con Python SQL alchemy, análisis estadístico multivariable e informes dinámicos de proyección.",
+    p5_title: "SaaS Product Landing & Analytics Interface",
+    p5_desc: "Página de aterrizaje de alto rendimiento optimizada para conversión y SEO. Diseño responsive moderno con glassmorphism y animaciones suaves en CSS/JS.",
+
+    // Contact Section
+    contact_subtitle: "¿Tienes un proyecto en mente?",
+    contact_title: "Hablemos y Hagámoslo Realidad",
+    contact_info_subtitle: "Información de Contacto",
+    contact_info_text: "Estoy abierto a oportunidades laborales, proyectos freelance o colaboraciones de ciencia/análisis de datos.",
+    contact_email_label: "Correo Electrónico",
+    contact_location_label: "Ubicación",
+    contact_location_val: "Disponible Presencial / Remoto / Híbrido",
+    contact_avail_label: "Disponibilidad",
+    contact_avail_val: "Respuesta en < 24 Horas",
+    social_title: "Sígueme en Redes",
+
+    label_name: "Nombre Completo",
+    placeholder_name: "Tu nombre o empresa",
+    err_name: "Por favor, ingresa tu nombre",
+    label_email: "Correo Electrónico",
+    placeholder_email: "ejemplo@correo.com",
+    err_email_req: "Por favor, ingresa tu correo",
+    err_email_invalid: "Por favor, ingresa un correo electrónico válido",
+    label_subject: "Asunto",
+    placeholder_subject: "Idea de proyecto / Consulta",
+    err_subject: "Por favor, ingresa el asunto",
+    label_message: "Mensaje",
+    placeholder_message: "Describe brevemente tus requerimientos...",
+    err_message: "Por favor, escribe un mensaje",
+    btn_submit: "Enviar Mensaje",
+    btn_sending: "Enviando...",
+
+    // Toast & Footer
+    toast_title: "¡Mensaje Enviado!",
+    toast_desc: "Gracias por contactarte. Te responderé pronto.",
+    footer_rights: "Todos los derechos reservados. Diseñado & desarrollado con Vanilla Web Stack.",
+
+    // Modal
+    modal_tag: "Limpieza & Transformación de Datos",
+    modal_status: "Caso Real & Production-Ready",
+    modal_main_title: 'Limpieza & Transformación de Datos: <br><span class="gradient-text-emerald">Perfil Exportador de Empresas Santafesinas</span>',
+    modal_tagline: "Sistema de Sanitización, Normalización y Consolidación de Datasets de Comercio Exterior",
+    modal_kpi1_label: "Archivos Procesados",
+    modal_kpi1_sub: "Datasets Excel de origen (Softrade)",
+    modal_kpi2_label: "Rol en el Proyecto",
+    modal_kpi2_sub: "Limpieza, Transformación e Integración",
+    modal_kpi3_label: "Resultado Consolidado",
+    modal_kpi3_sub: '"Fuente de Verdad" lista para Power BI',
+    modal_sec1_title: "Contexto del Negocio & Objetivo",
+    modal_sec1_context_sub: "Contexto",
+    modal_sec1_context_p: "Preparación y transformación de datos de comercio exterior para construir una base confiable de exportaciones de empresas de la provincia de Santa Fe a partir de reportes descargados de Softrade con inconsistencias, problemas de codificación y tildes.",
+    modal_sec1_obj_sub: "Objetivo del Proyecto",
+    modal_sec1_obj_p: "Construir una base consolidada, limpia y consistente aplicando procesos reproducibles de filtrado, validación y transformación.",
+    modal_bq_title: "Pregunta de Negocio",
+    modal_bq_p: "¿Cuál es el perfil exportador de las empresas santafesinas y qué características de sus exportaciones pueden identificarse a partir de la información de comercio exterior?",
+    modal_sec2_title: "Proceso de Trabajo (Paso a Paso)",
+    modal_step1_badge: "Paso 1",
+    modal_step1_title: "Preparación de Datos",
+    modal_step1_desc: "Ejecución de 2 notebooks de Python en VS Code con <code>pandas</code>, <code>unidecode</code> y <code>openpyxl</code>.",
+    modal_step2_badge: "Paso 2",
+    modal_step2_title: "Filtrado por Localidad",
+    modal_step2_desc: "Conversión a mayúsculas, mapeo de variantes de escritura y consolidación de 81 archivos en <code>Base_Unificada.xlsx</code>.",
+    modal_step3_badge: "Paso 3",
+    modal_step3_title: "Corrección de Localidades",
+    modal_step3_desc: "Uso de archivo auxiliar <code>Empresas modificadas.xlsx</code> para resolver casos con casas matrices en otras provincias.",
+    modal_step4_badge: "Paso 4",
+    modal_step4_title: "Filtrado por Empresa",
+    modal_step4_desc: "Lista manual validada de exportadores con variantes de razón social y errores tipográficos.",
+    modal_step5_badge: "Paso 5",
+    modal_step5_title: "Cruce, Validación y Control de Duplicados",
+    modal_step5_desc: "Comparación de salidas de localidad y empresa para evitar duplicación de registros.",
+    modal_step6_badge: "Paso 6",
+    modal_step6_title: "Transformación y Clasificación NCM",
+    modal_step6_desc: "Clasificación automatizada en Primario, MOA, MOI y Energía mediante el Nomenclador Mercosur.",
+    modal_sec3_title: "Snippets de Código Python",
+    modal_blockA_subtitle: "Bloque A: Algoritmo de Filtrado y Unificación de 81 Archivos Excel",
+    modal_blockA_intro: "Procesamiento iterativo de datasets descargados de Softrade, depuración de localidades y consolidación masiva:",
+    modal_copyA_btn: "Copiar Bloque A",
+    modal_blockB_subtitle: "Bloque B: Función de Clasificación por Sector según NCM (Primario, MOA, MOI, Energía)",
+    modal_blockB_intro: "Clasificación automatizada de productos según posición arancelaria NCM-SIM:",
+    modal_copyB_btn: "Copiar Bloque B",
+    modal_close_footer: "Cerrar Vista",
+    copied_text: "¡Copiado!"
+  },
+  en: {
+    meta_description: "Professional Data Analyst Portfolio. Projects, skills, and contact information.",
+    doc_title: "Professional Portfolio | Data Analyst",
+    nav_home: "Home",
+    nav_about: "About me",
+    nav_skills: "Skills",
+    nav_projects: "Projects",
+    nav_contact: "Contact",
+    aria_logo: "Go to home",
+    aria_nav: "Main navigation",
+    aria_hamburger: "Open navigation menu",
+    aria_github: "GitHub Profile",
+    aria_linkedin: "LinkedIn Profile",
+    aria_email: "Send Direct Email",
+    aria_modal_close: "Close details window",
+
+    // Hero Section
+    hero_badge: "Available for new projects",
+    hero_title: 'Data Analyst <br><span class="gradient-text">& Economist</span>',
+    hero_desc: "Data Analyst with an Economics background and Frontend Development capabilities. I combine quantitative analysis, data modeling, and web development to build digital products with business impact.",
+    hero_cta_projects: "View Projects",
+    hero_cta_contact: "Contact Me",
+    hero_stat_1_label: "Years of Experience",
+    hero_stat_2_label: "Vanilla JS & Clean Code",
+    hero_stat_3_label: "Python & SQL",
+    code_card_role: "Economist, Data Analyst & Frontend Developer",
+    code_card_passion: "Building the intelligent web",
+    code_card_comment: "// Execute data-to-value transformation",
+
+    // About Section
+    about_subtitle: "Career & Focus",
+    about_title: "About Me",
+    about_card1_title: "Economic Perspective",
+    about_card1_desc: "My background in Economics enables me to interpret data within the context in which it is generated, incorporating micro and macroeconomic perspectives, quantitative models, and an understanding of the incentives behind the numbers.",
+    about_card2_title: "Data & Business Intelligence",
+    about_card2_desc: "Using tools like Python, SQL, R, and Power BI, I transform data into actionable insights through cleaning, exploratory analysis, visualization, and KPI metrics to support data-driven decision making.",
+    about_card3_title: "Technology",
+    about_card3_desc: "I am particularly interested in how technological advancements are transforming data collection, analysis, and interpretation, and how these tools can enhance economic research.",
+
+    // Skills Section
+    skills_subtitle: "Tech Stack",
+    skills_title: "My Skills",
+    skills_cat1_title: "Data Analytics & Science",
+    skills_item_py_desc: 'Data Cleaning <span class="skill-desc-bullet">·</span> Exploratory Analysis <span class="skill-desc-bullet">·</span> ETL',
+    skills_item_vis_title: "Data Visualization",
+    skills_item_vis_desc: 'Matplotlib <span class="skill-desc-bullet">·</span> Seaborn <span class="skill-desc-bullet">·</span> Dashboards',
+    skills_cat2_title: "Databases & SQL",
+    skills_item_sql_desc: 'Complex Queries <span class="skill-desc-bullet">·</span> Joins & Aggregations <span class="skill-desc-bullet">·</span> Normalization',
+    skills_item_git_title: "Git & Version Control",
+    skills_item_git_desc: 'Branching Workflows <span class="skill-desc-bullet">·</span> Commits <span class="skill-desc-bullet">·</span> GitHub Repositories',
+    skills_cat3_title: "Economics & BI",
+    skills_item_econ_title: "Economic Analysis",
+    skills_item_econ_desc: 'Quantitative Models <span class="skill-desc-bullet">·</span> KPI Interpretation <span class="skill-desc-bullet">·</span> Decision Making',
+    skills_item_bi_desc: 'Power BI <span class="skill-desc-bullet">·</span> Financial Reports <span class="skill-desc-bullet">·</span> Key Metrics',
+    skills_cat4_title: "Frontend Development",
+    skills_item_fe_desc: 'Responsive Design <span class="skill-desc-bullet">·</span> Web Layouts <span class="skill-desc-bullet">·</span> UI Development',
+    skills_item_js_desc: 'DOM Manipulation <span class="skill-desc-bullet">·</span> Interactive Interfaces',
+    skills_badges_title: "Core Technologies",
+
+    // Projects Section
+    projects_subtitle: "Portfolio of Work",
+    projects_title: "Featured Projects",
+    filter_all: "All",
+    filter_web: "Web Development",
+    filter_data: "Data Analytics",
+    filter_cleaning: "Data Cleaning",
+    tag_cleaning: "Data Cleaning",
+    tag_data: "Data Analytics",
+    tag_web: "Web Development",
+    btn_view_project: "View Project",
+    btn_github: "GitHub Code",
+    demo_alert: "Online interactive demonstration",
+
+    p1_title: "Dataset Cleaning & Normalization",
+    p1_desc: "Automated pipeline for data scrubbing, null/outlier detection, city and company entity recognition using Python (Pandas & NumPy).",
+    p2_title: "Interactive Business Analytics Dashboard",
+    p2_desc: "Interactive dashboard for real-time sales processing and visualization. Exploratory data analysis with Python (Pandas) and structured charting.",
+    p3_title: "E-Commerce Web Application (Vanilla JS)",
+    p3_desc: "Full-featured online store built without frameworks. Includes interactive catalog, dynamic product filtering, and shopping cart persisted in localStorage.",
+    p4_title: "ETL Pipeline & Market Trend Analysis",
+    p4_desc: "Automated extraction and data cleaning solution using Python SQLAlchemy, multivariable statistical analysis, and dynamic forecast reports.",
+    p5_title: "SaaS Product Landing & Analytics Interface",
+    p5_desc: "High-performance landing page optimized for conversion and SEO. Modern responsive design featuring glassmorphism and smooth CSS/JS animations.",
+
+    // Contact Section
+    contact_subtitle: "Have a project in mind?",
+    contact_title: "Let's Talk & Make It Happen",
+    contact_info_subtitle: "Contact Information",
+    contact_info_text: "I am open to job opportunities, freelance projects, or data science & analytics collaborations.",
+    contact_email_label: "Email Address",
+    contact_location_label: "Location",
+    contact_location_val: "Available On-site / Remote / Hybrid",
+    contact_avail_label: "Availability",
+    contact_avail_val: "Response in < 24 Hours",
+    social_title: "Follow Me",
+
+    label_name: "Full Name",
+    placeholder_name: "Your name or company",
+    err_name: "Please enter your name",
+    label_email: "Email Address",
+    placeholder_email: "example@email.com",
+    err_email_req: "Please enter your email",
+    err_email_invalid: "Please enter a valid email address",
+    label_subject: "Subject",
+    placeholder_subject: "Project idea / Inquiry",
+    err_subject: "Please enter the subject",
+    label_message: "Message",
+    placeholder_message: "Briefly describe your requirements...",
+    err_message: "Please write a message",
+    btn_submit: "Send Message",
+    btn_sending: "Sending...",
+
+    // Toast & Footer
+    toast_title: "Message Sent!",
+    toast_desc: "Thank you for reaching out. I'll get back to you soon.",
+    footer_rights: "All rights reserved. Designed & developed with Vanilla Web Stack.",
+
+    // Modal
+    modal_tag: "Data Cleaning & Transformation",
+    modal_status: "Real-world Case & Production-Ready",
+    modal_main_title: 'Data Cleaning & Transformation: <br><span class="gradient-text-emerald">Exporter Profile of Santa Fe Companies</span>',
+    modal_tagline: "Sanitization, Normalization, and Consolidation System for Foreign Trade Datasets",
+    modal_kpi1_label: "Files Processed",
+    modal_kpi1_sub: "Source Excel Datasets (Softrade)",
+    modal_kpi2_label: "Role in Project",
+    modal_kpi2_sub: "Cleaning, Transformation & Integration",
+    modal_kpi3_label: "Consolidated Result",
+    modal_kpi3_sub: '"Single Source of Truth" ready for Power BI',
+    modal_sec1_title: "Business Context & Objective",
+    modal_sec1_context_sub: "Context",
+    modal_sec1_context_p: "Preparation and transformation of foreign trade data to build a reliable export database for companies in Santa Fe province, starting from Softrade reports affected by encoding issues, typos, and accents.",
+    modal_sec1_obj_sub: "Project Objective",
+    modal_sec1_obj_p: "Build a consolidated, clean, and consistent database by applying reproducible filtering, validation, and transformation pipelines.",
+    modal_bq_title: "Business Question",
+    modal_bq_p: "What is the exporter profile of Santa Fe companies and what key export characteristics can be identified from foreign trade datasets?",
+    modal_sec2_title: "Workflow Process (Step by Step)",
+    modal_step1_badge: "Step 1",
+    modal_step1_title: "Data Preparation",
+    modal_step1_desc: "Execution of 2 Python notebooks in VS Code using <code>pandas</code>, <code>unidecode</code>, and <code>openpyxl</code>.",
+    modal_step2_badge: "Step 2",
+    modal_step2_title: "City Filtering",
+    modal_step2_desc: "Uppercase conversion, mapping spelling variations, and consolidating 81 Excel files into <code>Base_Unificada.xlsx</code>.",
+    modal_step3_badge: "Step 3",
+    modal_step3_title: "City Correction",
+    modal_step3_desc: "Using auxiliary reference file <code>Empresas modificadas.xlsx</code> to resolve headquarters located in other provinces.",
+    modal_step4_badge: "Step 4",
+    modal_step4_title: "Company Filtering",
+    modal_step4_desc: "Validated manual list of exporters handling legal entity name variations and typographical errors.",
+    modal_step5_badge: "Step 5",
+    modal_step5_title: "Cross-matching, Validation & Deduplication",
+    modal_step5_desc: "Comparing city and company outputs to prevent record duplication.",
+    modal_step6_badge: "Step 6",
+    modal_step6_title: "NCM Classification & Transformation",
+    modal_step6_desc: "Automated classification into Primary Goods, MOA (Agricultural Manufactures), MOI (Industrial Manufactures), and Energy via Mercosur Nomenclature.",
+    modal_sec3_title: "Python Code Snippets",
+    modal_blockA_subtitle: "Block A: Filtering Algorithm and 81 Excel File Consolidation",
+    modal_blockA_intro: "Iterative processing of Softrade datasets, city sanitization, and bulk consolidation:",
+    modal_copyA_btn: "Copy Block A",
+    modal_blockB_subtitle: "Block B: Sector Classification Function by NCM (Primary, MOA, MOI, Energy)",
+    modal_blockB_intro: "Automated product classification based on NCM-SIM tariff code:",
+    modal_copyB_btn: "Copy Block B",
+    modal_close_footer: "Close View",
+    copied_text: "Copied!"
+  }
+};
+
+let currentLang = 'es';
+
+function getCurrentLang() {
+  return currentLang;
+}
+
+function triggerDemoAlert() {
+  const dict = i18nTranslations[currentLang] || i18nTranslations.es;
+  alert(dict.demo_alert || 'Demostración interactiva en línea');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   // Inicialización de componentes
+  initLanguageToggle();
   initThemeToggle();
   initMobileMenu();
   initSmoothScrollAndActiveNav();
@@ -16,6 +363,109 @@ document.addEventListener('DOMContentLoaded', () => {
   initDynamicYear();
   initProjectModals();
 });
+
+/* --------------------------------------------------------------------------
+   0. CAMBIO DE IDIOMA (ESPAÑOL / INGLÉS) CON LOCALSTORAGE E I18N
+   -------------------------------------------------------------------------- */
+function initLanguageToggle() {
+  const langToggleBtn = document.getElementById('lang-toggle');
+  const STORAGE_KEY = 'portfolio_lang';
+
+  // 1. Obtener idioma guardado o preferencia del navegador
+  const savedLang = localStorage.getItem(STORAGE_KEY);
+  const browserLang = navigator.language && navigator.language.startsWith('en') ? 'en' : 'es';
+
+  currentLang = savedLang || browserLang;
+
+  // Aplicar idioma inicial
+  applyLanguage(currentLang);
+
+  // 2. Escuchar evento de clic en el botón de idioma
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', () => {
+      currentLang = currentLang === 'es' ? 'en' : 'es';
+      applyLanguage(currentLang);
+      localStorage.setItem(STORAGE_KEY, currentLang);
+    });
+  }
+
+  function applyLanguage(lang) {
+    document.documentElement.lang = lang;
+
+    // Actualizar estilo visual del botón ES / EN
+    const esOption = document.querySelector('.lang-option.lang-es');
+    const enOption = document.querySelector('.lang-option.lang-en');
+    if (esOption && enOption) {
+      esOption.classList.toggle('active', lang === 'es');
+      enOption.classList.toggle('active', lang === 'en');
+    }
+
+    if (langToggleBtn) {
+      const toggleLabel = lang === 'es' ? 'Switch to English' : 'Cambiar a español';
+      langToggleBtn.setAttribute('aria-label', toggleLabel);
+      langToggleBtn.setAttribute('title', toggleLabel);
+    }
+
+    const dict = i18nTranslations[lang];
+    if (!dict) return;
+
+    // Actualizar elementos de texto (data-i18n)
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) {
+        el.textContent = dict[key];
+      }
+    });
+
+    // Actualizar elementos con contenido HTML (data-i18n-html)
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (dict[key] !== undefined) {
+        el.innerHTML = dict[key];
+      }
+    });
+
+    // Actualizar placeholders (data-i18n-placeholder)
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (dict[key] !== undefined) {
+        el.placeholder = dict[key];
+      }
+    });
+
+    // Actualizar títulos (data-i18n-title)
+    document.querySelectorAll('[data-i18n-title]').forEach(el => {
+      const key = el.getAttribute('data-i18n-title');
+      if (dict[key] !== undefined) {
+        el.title = dict[key];
+      }
+    });
+
+    // Actualizar meta content (data-i18n-content)
+    document.querySelectorAll('[data-i18n-content]').forEach(el => {
+      const key = el.getAttribute('data-i18n-content');
+      if (dict[key] !== undefined) {
+        el.setAttribute('content', dict[key]);
+      }
+    });
+
+    // Actualizar aria-label (data-i18n-aria)
+    document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+      const key = el.getAttribute('data-i18n-aria');
+      if (dict[key] !== undefined) {
+        el.setAttribute('aria-label', dict[key]);
+      }
+    });
+
+    // Actualizar strings dinámicos de la tarjeta de código Hero
+    const codeRole = document.getElementById('code-card-role');
+    const codePassion = document.getElementById('code-card-passion');
+    const codeComment = document.getElementById('code-card-comment');
+    if (codeRole) codeRole.textContent = `"${dict.code_card_role}"`;
+    if (codePassion) codePassion.textContent = `"${dict.code_card_passion}"`;
+    if (codeComment) codeComment.textContent = dict.code_card_comment;
+  }
+}
 
 /* --------------------------------------------------------------------------
    1. CAMBIO DE TEMA (DARK / LIGHT MODE) CON LOCALSTORAGE
@@ -106,7 +556,7 @@ function initSmoothScrollAndActiveNav() {
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section[id]');
 
-  // Scroll Suave mediante JS (para compatibilidad consistente)
+  // Scroll Suave mediante JS
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
@@ -163,7 +613,6 @@ function initProjectFilters() {
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Activar botón seleccionado
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
@@ -187,7 +636,7 @@ function initProjectFilters() {
 }
 
 /* --------------------------------------------------------------------------
-   5. VALIDACIÓN DE FORMULARIO DE CONTACTO & NOTIFICACIÓN TOAST
+   5. VALIDACIÓN DE FORMULARIO DE CONTACTO & NOTIFICACIÓN TOAST (BILINGÜE)
    -------------------------------------------------------------------------- */
 function initContactForm() {
   const form = document.getElementById('contact-form');
@@ -207,6 +656,7 @@ function initContactForm() {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     let isValid = true;
+    const dict = i18nTranslations[currentLang] || i18nTranslations.es;
 
     // Reset mensajes de error
     Object.values(fields).forEach(f => {
@@ -216,29 +666,29 @@ function initContactForm() {
 
     // Validar Nombre
     if (!fields.name.el.value.trim()) {
-      showFieldError(fields.name, 'Por favor, ingresa tu nombre');
+      showFieldError(fields.name, dict.err_name);
       isValid = false;
     }
 
     // Validar Email
     const emailValue = fields.email.el.value.trim();
     if (!emailValue) {
-      showFieldError(fields.email, 'Por favor, ingresa tu correo');
+      showFieldError(fields.email, dict.err_email_req);
       isValid = false;
     } else if (!validateEmail(emailValue)) {
-      showFieldError(fields.email, 'Por favor, ingresa un correo electrónico válido');
+      showFieldError(fields.email, dict.err_email_invalid);
       isValid = false;
     }
 
     // Validar Asunto
     if (!fields.subject.el.value.trim()) {
-      showFieldError(fields.subject, 'Por favor, ingresa el asunto');
+      showFieldError(fields.subject, dict.err_subject);
       isValid = false;
     }
 
     // Validar Mensaje
     if (!fields.message.el.value.trim()) {
-      showFieldError(fields.message, 'Por favor, escribe un mensaje');
+      showFieldError(fields.message, dict.err_message);
       isValid = false;
     }
 
@@ -248,15 +698,15 @@ function initContactForm() {
 
       // Estado de carga en el botón
       submitBtn.disabled = true;
-      submitBtn.innerHTML = `<span>Enviando...</span>`;
+      submitBtn.innerHTML = `<span>${dict.btn_sending}</span>`;
 
-      // Simulación de envío de formulario (API call mock)
+      // Simulación de envío de formulario
       setTimeout(() => {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
         form.reset();
 
-        showToast('¡Mensaje Enviado con Éxito!', 'Gracias por tu mensaje. Me pondré en contacto contigo pronto.');
+        showToast(dict.toast_title, dict.toast_desc);
       }, 1000);
     }
   });
@@ -302,7 +752,6 @@ function initProjectModals() {
   const modal = document.getElementById('project-5-modal');
   const closeBtnHeader = document.getElementById('close-modal-p5');
   const closeBtnFooter = document.getElementById('close-modal-p5-footer');
-  const copyBtn = document.getElementById('copy-code-p5');
 
   if (!modal) return;
 
@@ -344,19 +793,22 @@ function initProjectModals() {
     }
   });
 
-  // Funcionalidad de copiar código Python al portapapeles (Helper reutilizable)
+  // Funcionalidad de copiar código Python al portapapeles
   function setupCopyButton(buttonId, codeText) {
     const btn = document.getElementById(buttonId);
     if (!btn) return;
 
     btn.addEventListener('click', () => {
+      const dict = i18nTranslations[currentLang] || i18nTranslations.es;
+      const copiedStr = dict.copied_text || '¡Copiado!';
+
       navigator.clipboard.writeText(codeText).then(() => {
         const originalHtml = btn.innerHTML;
         btn.innerHTML = `
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
-          <span>¡Copiado!</span>
+          <span>${copiedStr}</span>
         `;
         btn.style.background = 'rgba(16, 185, 129, 0.25)';
         btn.style.color = 'var(--emerald)';
