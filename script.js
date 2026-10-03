@@ -30,7 +30,7 @@ const i18nTranslations = {
     // Hero Section
     hero_badge: "Disponible para nuevos proyectos",
     hero_title: 'Data Analyst <br><span class="gradient-text">& Economista</span>',
-    hero_desc: "Analista de Datos con base en Economía y capacidades de Desarrollo Frontend. Combino el análisis cuantitativo, la modelación de datos y el desarrollo web para crear productos digitales con impacto de negocio.",
+    hero_desc: "Analista de Datos con base en Economía combino el análisis cuantitativo, la modelación de datos y el desarrollo web para crear productos digitales con impacto de negocio.",
     hero_cta_projects: "Ver Proyectos",
     hero_cta_contact: "Contactarme",
     hero_stat_1_label: "Años de Experiencia",
