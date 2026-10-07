@@ -147,9 +147,8 @@
               </div>
               <h3 data-i18n="about_card3_title">Tecnología</h3>
               <p data-i18n="about_card3_desc">
-                Me interesa especialmente cómo los avances tecnológicos están transformando la forma en que recopilamos,
-                analizamos e interpretamos información, y cómo estas herramientas pueden potenciar el análisis
-                económico.
+                Me interesa la aplicación de nuevas tecnologías al análisis de datos y cómo la automatización y las
+                herramientas digitales permiten optimizar procesos y ampliar las posibilidades del análisis.
               </p>
             </div>
           </div>
@@ -429,10 +428,16 @@
           <h4 class="badges-title" data-i18n="skills_badges_title">Tecnologías Principales</h4>
           <div class="tech-badges-container">
             <span class="tech-badge"><i class="badge-dot"></i> Python</span>
+            <span class="tech-badge"><i class="badge-dot"></i> R</span>
             <span class="tech-badge"><i class="badge-dot"></i> SQL</span>
+            <span class="tech-badge"><i class="badge-dot"></i> BigQuery</span>
             <span class="tech-badge"><i class="badge-dot"></i> Pandas</span>
+            <span class="tech-badge"><i class="badge-dot"></i> Numpy</span>
             <span class="tech-badge"><i class="badge-dot"></i> Matplotlib / Seaborn</span>
             <span class="tech-badge"><i class="badge-dot"></i> Git & GitHub</span>
+            <span class="tech-badge"><i class="badge-dot"></i> Excel</span>
+            <span class="tech-badge"><i class="badge-dot"></i> Power BI</span>
+            <span class="tech-badge"><i class="badge-dot"></i> Looker Studio</span>
           </div>
         </div>
       </div>
@@ -983,7 +988,41 @@
           </div>
         </div>
 
-        <!-- 2. SECCIÓN DASHBOARD INTERACTIVO DE PRODUCCIÓN DE GAS -->
+        <!-- 2. PRINCIPALES HALLAZGOS DEL ANÁLISIS -->
+        <section class="modal-section modal-insights" aria-labelledby="modal-petro-insights-title">
+          <h3 class="modal-section-title" id="modal-petro-insights-title" data-i18n="modal_petro_insights_title">
+            Principales hallazgos del análisis
+          </h3>
+          <p class="insights-intro" data-i18n="modal_petro_insights_intro">
+            Indicadores de la producción de gas natural en Argentina.
+          </p>
+
+          <div class="insights-metrics">
+            <article class="insight-metric">
+              <strong class="insight-value">70%</strong>
+              <span class="insight-label" data-i18n="modal_petro_insight_share">
+                Participación no convencional · julio de 2026
+              </span>
+            </article>
+            <article class="insight-metric">
+              <strong class="insight-value">-1,82%</strong>
+              <span class="insight-label" data-i18n="modal_petro_insight_yoy">
+                Variación interanual · julio de 2026
+              </span>
+            </article>
+          </div>
+
+          <ul class="insights-points">
+            <li data-i18n="modal_petro_insight_point1">La producción no convencional pasó de 2,6 M a 3,4 M, en el primer
+              semestre de 2026.</li>
+            <li data-i18n="modal_petro_insight_point2">En el primer semestre de 2026, Total Austral S.A. lideró la
+              producción.</li>
+            <li data-i18n="modal_petro_insight_point3">En julio de 2026, se observa una brecha del 136% entre la
+              producción no convencional y la convencional.</li>
+          </ul>
+        </section>
+
+        <!-- 3. SECCIÓN DASHBOARD INTERACTIVO DE PRODUCCIÓN DE GAS -->
         <div class="modal-section glass-card">
           <h3 class="modal-section-title">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -1131,15 +1170,10 @@
 
       <!-- Modal Footer -->
       <div class="modal-footer">
-        <a href="https://github.com/Data-analyst-Herrera-Sosa/Argentina_petroleo_gas" target="_blank"
+        <a href="https://datastudio.google.com/reporting/cf301dc4-9ae2-439a-b327-3bbab070c847" target="_blank"
           rel="noopener noreferrer" class="btn btn-primary">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path
-              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-            </path>
-          </svg>
-          <span data-i18n="btn_github">Código en GitHub</span>
+          <img class="looker-studio-icon" src="assets/looker-studio-logo.png" alt="" aria-hidden="true">
+          <span data-i18n="modal_petro_looker_btn">Looker Studio</span>
         </a>
         <button type="button" class="btn btn-secondary" onclick="closeModal('modal-petroleo-gas')"
           data-i18n="modal_close_footer">

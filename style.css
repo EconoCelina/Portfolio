@@ -2923,6 +2923,51 @@ body { background-color:var(--bg-main); }
 #modal-petroleo-gas .modal-close-btn,
 #modal-petroleo-gas .btn-secondary { color:#222; background:#f8f8f7; border-color:#cececc; }
 #modal-petroleo-gas .dashboard-preview-img { border-color:#d0d0ce !important; }
+#modal-petroleo-gas .looker-studio-icon { width:22px; height:22px; object-fit:contain; flex:0 0 22px; }
+#modal-petroleo-gas .modal-insights { padding:22px 24px; }
+#modal-petroleo-gas .insights-intro {
+  margin:-8px 0 16px;
+  color:#555;
+  font-size:.92rem;
+}
+#modal-petroleo-gas .insights-metrics {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+#modal-petroleo-gas .insight-metric {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:4px;
+  min-height:92px;
+  padding:14px 16px;
+  border:1px solid #d7d7d5;
+  border-radius:12px;
+  background:#ededeb;
+}
+#modal-petroleo-gas .insight-value {
+  color:#171717;
+  font-size:1.65rem;
+  font-weight:700;
+  line-height:1.1;
+}
+#modal-petroleo-gas .insight-label { color:#555; font-size:.88rem; line-height:1.4; }
+#modal-petroleo-gas .insights-points {
+  display:grid;
+  gap:9px;
+  margin:16px 0 0;
+  padding-left:22px;
+  color:#292929;
+  font-size:.94rem;
+  line-height:1.55;
+}
+#modal-petroleo-gas .insights-points li::marker { color:#777; }
+@media (max-width:600px) {
+  #modal-petroleo-gas .modal-insights { padding:18px; }
+  #modal-petroleo-gas .insights-metrics { grid-template-columns:1fr; gap:10px; }
+  #modal-petroleo-gas .insight-metric { min-height:78px; }
+}
 
 /* Santa Fe project cover: a compact, readable ETL flow in the site's grayscale palette. */
 #projects .etl-image-container { min-height:370px; }
@@ -3001,3 +3046,27 @@ body { background-color:var(--bg-main); }
   border-color:#292929;
 }
 [data-theme="light"] .tech-badges-wrapper .tech-badge:hover .badge-dot { background:#f8f8f7; }
+
+/* Strengthen the hierarchy between each skill subcategory and its details. */
+#skills .skill-tech-name {
+  color:#f2f2f2;
+  font-size:1rem;
+}
+#skills .skill-desc {
+  color:#c9c9c9;
+  font-size:.9rem;
+  line-height:1.6;
+}
+#skills .skill-desc-bullet { color:#929292; opacity:1; }
+
+/* Keep contact details legible against the dark contact cards. */
+#contact .contact-card,
+#contact .contact-card:nth-child(2) {
+  color:#f2f2f2;
+  background:#1b1b1b;
+  border-color:rgba(255,255,255,.18);
+}
+#contact .contact-label { color:#bcbcbc; }
+#contact .contact-value { color:#f5f5f5; }
+#contact .contact-icon { color:#f2f2f2; background:#303030; }
+#contact .contact-text { color:#bcbcbc; }
