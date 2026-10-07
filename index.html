@@ -317,25 +317,45 @@
           <details class="project-card glass-card" data-category="data">
             <summary class="project-summary">
               <span class="project-number">03</span>
-              <h3 class="project-title" data-i18n="p4_title">Pipeline ETL & Análisis de Tendencias de Mercado</h3>
-              <span class="project-summary-category" data-i18n="tag_data">Análisis de Datos</span>
+              <h3 class="project-title" data-i18n="p4_title">Automatización del Proceso de Facturación</h3>
+              <span class="project-summary-category" data-i18n="tag_automation">Automatización de Procesos</span>
             </summary>
             <div class="project-expanded">
             <div class="project-image-container">
-              <div class="project-cover cover-etl">
-                <div class="etl-node">CSV</div>
-                <div class="etl-line"></div>
-                <div class="etl-node etl-node-main">ETL</div>
-                <div class="etl-line"></div>
-                <div class="etl-node">SQL</div>
-                <div class="etl-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="project-cover billing-cover" aria-hidden="true">
+                <div class="billing-cover-panel">
+                  <span data-i18n="billing_cover_before">Proceso manual</span>
+                  <strong>60 min</strong>
+                  <small data-i18n="billing_cover_monthly">Una vez al mes</small>
+                </div>
+                <span class="billing-cover-arrow" aria-hidden="true">→</span>
+                <div class="billing-cover-panel billing-cover-result">
+                  <span data-i18n="billing_cover_after">Facturación automatizada</span>
+                  <strong>5 min</strong>
+                  <small>Python · Excel</small>
+                </div>
               </div>
             </div>
             <div class="project-content">
-              <p class="project-description" data-i18n="p4_desc">Extracción automatizada, limpieza y análisis de
-                tendencias con reportes dinámicos.</p>
-              <div class="project-techs"><span class="tag">Python</span><span class="tag">SQLAlchemy</span><span
-                  class="tag">ETL</span></div>
+              <p class="project-description" data-i18n="p4_desc">Automatización con Python de un proceso mensual de facturación, reduciendo el tiempo de trabajo de 60 a 5 minutos y el riesgo de errores de carga manual.</p>
+              <div class="project-techs">
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Excel</span>
+                <span class="tag" data-i18n="billing_tag_cleaning">Limpieza de Datos</span>
+                <span class="tag" data-i18n="billing_tag_automation">Automatización de Procesos</span>
+              </div>
+              <div class="project-links">
+                <button class="btn-project btn-project-primary" onclick="openModal('modal-billing-automation')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  <span data-i18n="btn_view_project">Ver Proyecto</span>
+                </button>
+              </div>
             </div>
             </div>
           </details>
@@ -1147,6 +1167,171 @@
         </button>
       </div>
 
+    </div>
+  </div>
+
+  <!-- Modal 3: Automatización del Proceso de Facturación -->
+  <div id="modal-billing-automation" class="modal-backdrop modal-overlay" aria-hidden="true" role="dialog"
+    aria-labelledby="billing-modal-title">
+    <div class="modal-container modal-content glass-card">
+      <div class="modal-header">
+        <div class="modal-badge-group">
+          <span class="project-category-tag tag-emerald" data-i18n="billing_modal_tag">Automatización de Procesos</span>
+          <span class="modal-status-badge" data-i18n="billing_modal_status">Caso real · Facturación mensual</span>
+        </div>
+        <button type="button" class="modal-close-btn modal-close" aria-label="Cerrar ventana de detalles"
+          onclick="closeModal('modal-billing-automation')" data-i18n-aria="aria_modal_close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body billing-modal-body">
+        <section class="modal-hero-section billing-hero">
+          <h2 class="modal-main-title" id="billing-modal-title" data-i18n="billing_title">Automatización del Proceso de Facturación</h2>
+          <p class="modal-tagline" data-i18n="billing_tagline">Automatización con Python de un proceso mensual de facturación</p>
+          <p class="billing-description" data-i18n="billing_description">Un flujo repetitivo y propenso a errores de tipeo se transformó en un proceso automatizado, reduciendo el tiempo de trabajo de 60 minutos a 5 minutos.</p>
+          <div class="billing-hero-metrics">
+            <div class="billing-hero-metric">
+              <strong>60 min <span aria-hidden="true">→</span> 5 min</strong>
+              <span data-i18n="billing_hero_metric_label">Tiempo de procesamiento</span>
+            </div>
+            <div class="billing-hero-metric billing-hero-metric-accent">
+              <strong>12×</strong>
+              <span data-i18n="billing_hero_speed_label">Reducción del tiempo de procesamiento</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="modal-section glass-card billing-case-section">
+          <h3 class="modal-section-title" data-i18n="billing_challenge_title">El desafío</h3>
+          <p class="billing-section-intro" data-i18n="billing_challenge_intro">La facturación se realizaba al cierre de cada mes y debía resolverse junto con otras responsabilidades.</p>
+          <ul class="billing-challenge-list">
+            <li data-i18n="billing_challenge_1">La carga rápida de datos podía generar errores de tipeo.</li>
+            <li data-i18n="billing_challenge_2">Los nombres de algunas empresas clientes se ingresaban incompletos o con variaciones.</li>
+            <li data-i18n="billing_challenge_3">La revisión y corrección manual hacía que el proceso demandara cerca de una hora.</li>
+          </ul>
+          <div class="billing-manual-flow" aria-label="Flujo manual original" data-i18n-aria="billing_flow_label">
+            <span data-i18n="billing_flow_raw">Datos de origen</span>
+            <b aria-hidden="true">→</b>
+            <span data-i18n="billing_flow_review">Revisión manual</span>
+            <b aria-hidden="true">→</b>
+            <span data-i18n="billing_flow_corrections">Correcciones manuales</span>
+            <b aria-hidden="true">→</b>
+            <span data-i18n="billing_flow_excel">Excel de facturación</span>
+          </div>
+        </section>
+
+        <section class="modal-section glass-card billing-case-section">
+          <h3 class="modal-section-title" data-i18n="billing_method_title">Cómo lo resolví</h3>
+          <div class="workflow-timeline billing-method-grid">
+            <article class="workflow-step">
+              <span class="step-badge">01</span>
+              <h4 class="step-title" data-i18n="billing_step1_title">Comprender el flujo de trabajo</h4>
+              <p class="step-desc" data-i18n="billing_step1_desc">Identifiqué la fuente de datos, la estructura de la base y el proceso de facturación existente.</p>
+            </article>
+            <article class="workflow-step">
+              <span class="step-badge">02</span>
+              <h4 class="step-title" data-i18n="billing_step2_title">Analizar los datos</h4>
+              <p class="step-desc" data-i18n="billing_step2_desc">Usé Python para inspeccionar la base e identificar inconsistencias en los nombres de clientes.</p>
+            </article>
+            <article class="workflow-step">
+              <span class="step-badge">03</span>
+              <h4 class="step-title" data-i18n="billing_step3_title">Estandarizar los registros de clientes</h4>
+              <p class="step-desc" data-i18n="billing_step3_desc">Observé que las dos primeras letras de cada nombre se mantenían correctas y utilicé startswith() para agrupar los registros por cliente.</p>
+            </article>
+            <article class="workflow-step">
+              <span class="step-badge">04</span>
+              <h4 class="step-title" data-i18n="billing_step4_title">Generar el archivo de facturación</h4>
+              <p class="step-desc" data-i18n="billing_step4_desc">Creé scripts de Python para dar formato a los datos según los requisitos del cliente y generar el archivo final de facturación en Excel.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="modal-section glass-card billing-case-section">
+          <h3 class="modal-section-title" data-i18n="billing_logic_title">Una regla simple para unificar nombres</h3>
+          <p class="billing-section-intro" data-i18n="billing_logic_intro">La coincidencia por prefijo permitió reunir variantes del nombre de un mismo cliente antes de generar la facturación.</p>
+          <div class="billing-logic-layout">
+            <div class="billing-name-example">
+              <span>“Cliente Alfa”</span>
+              <span>“Cliente Alfa S.A.”</span>
+              <span>“Cliente Alfa SA”</span>
+              <span>“Cliente Alfa Sociedad Anónima”</span>
+              <b aria-hidden="true">↓</b>
+              <small data-i18n="billing_logic_customer">Cliente agrupado</small>
+              <strong>CL...</strong>
+            </div>
+            <div class="billing-code-panel">
+              <span class="billing-code-label">Python · startswith()</span>
+              <pre><code>if customer.startswith(prefix):
+    assign_to_customer()</code></pre>
+            </div>
+          </div>
+          <p class="billing-anonymized-note" data-i18n="billing_logic_note">Ejemplo ilustrativo y anonimizado; no se muestran datos reales de clientes.</p>
+        </section>
+
+        <section class="modal-section glass-card billing-case-section">
+          <h3 class="modal-section-title" data-i18n="billing_compare_title">Antes y después</h3>
+          <div class="billing-compare-grid">
+            <div class="billing-compare-card billing-before-card">
+              <h4 data-i18n="billing_before_title">Antes</h4>
+              <strong>60 min</strong>
+              <ul>
+                <li data-i18n="billing_before_1">60 minutos de trabajo</li>
+                <li data-i18n="billing_before_2">Proceso manual mensual</li>
+                <li data-i18n="billing_before_3">Correcciones y formato manual</li>
+                <li data-i18n="billing_before_4">Riesgo de errores de tipeo</li>
+              </ul>
+            </div>
+            <div class="billing-compare-card billing-after-card">
+              <h4 data-i18n="billing_after_title">Después</h4>
+              <strong>5 min</strong>
+              <ul>
+                <li data-i18n="billing_after_1">5 minutos de procesamiento</li>
+                <li data-i18n="billing_after_2">Automatización con Python</li>
+                <li data-i18n="billing_after_3">Nombres de clientes estandarizados</li>
+                <li data-i18n="billing_after_4">Archivo Excel con formato requerido</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="modal-section glass-card billing-case-section">
+          <h3 class="modal-section-title" data-i18n="billing_impact_title">Impacto</h3>
+          <div class="billing-results-grid">
+            <article><strong>12×</strong><span data-i18n="billing_impact_12x">Reducción del tiempo de procesamiento</span></article>
+            <article><strong>55 min</strong><span data-i18n="billing_impact_saved">Tiempo ahorrado por ciclo mensual</span></article>
+            <article><strong>5 min</strong><span data-i18n="billing_impact_after">Tiempo requerido después de automatizar</span></article>
+          </div>
+          <p class="billing-section-intro billing-impact-copy" data-i18n="billing_impact_desc">El proceso automatizado redujo la tarea mensual de aproximadamente 60 minutos a 5, permitiendo completar en 5 minutos lo que antes llevaba una hora.</p>
+        </section>
+
+        <section class="modal-section glass-card billing-case-section billing-technical-section">
+          <h3 class="modal-section-title" data-i18n="billing_tech_title">Tecnologías y técnicas</h3>
+          <div class="modal-tech-stack">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Pandas</span>
+            <span class="tech-pill">Excel</span>
+            <span class="tech-pill" data-i18n="billing_tag_cleaning">Limpieza de Datos</span>
+            <span class="tech-pill" data-i18n="billing_tag_matching">Coincidencia de cadenas</span>
+            <span class="tech-pill" data-i18n="billing_tag_automation">Automatización de Procesos</span>
+          </div>
+        </section>
+
+        <section class="modal-section glass-card billing-case-section billing-closing-section">
+          <h3 class="modal-section-title" data-i18n="billing_closing_title">De una tarea repetitiva a un flujo automatizado</h3>
+          <p class="billing-section-intro" data-i18n="billing_closing_desc">Al analizar la estructura y la calidad de los datos existentes, identifiqué una regla de coincidencia simple y confiable y convertí el flujo manual en un proceso automatizado con Python.</p>
+        </section>
+      </div>
+
+      <div class="modal-footer">
+        <a href="#projects" class="btn btn-primary" onclick="closeModal('modal-billing-automation')">
+          <span data-i18n="billing_back_projects">Volver a Proyectos</span>
+        </a>
+      </div>
     </div>
   </div>
 

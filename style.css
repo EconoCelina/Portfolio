@@ -3070,3 +3070,159 @@ body { background-color:var(--bg-main); }
 #contact .contact-value { color:#f5f5f5; }
 #contact .contact-icon { color:#f2f2f2; background:#303030; }
 #contact .contact-text { color:#bcbcbc; }
+
+/* Billing automation cover and case study, matched to the portfolio's grayscale cards. */
+#projects .billing-cover {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(8px,2vw,18px);
+  padding:20px;
+  background:#d8d8d6;
+  filter:none;
+}
+#projects .billing-cover-panel {
+  display:flex;
+  flex:1 1 0;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-width:0;
+  min-height:150px;
+  padding:14px 10px;
+  border:1px solid #c9c9c7;
+  border-radius:16px;
+  background:#f7f7f6;
+  color:#414141;
+  text-align:center;
+}
+#projects .billing-cover-panel > span { font-size:.68rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+#projects .billing-cover-panel strong { color:#151515; font-size:clamp(1.4rem,3vw,2rem); line-height:1; }
+#projects .billing-cover-panel small { color:#666; font-size:.72rem; }
+#projects .billing-cover-result { background:#ececea; }
+#projects .billing-cover-arrow { flex:0 0 auto; color:#555; font-size:1.5rem; }
+
+#modal-billing-automation {
+  --bg-surface:#f1f1f0;
+  --bg-surface-alt:#e5e5e3;
+  --bg-card:#f8f8f7;
+  --text-main:#171717;
+  --text-muted:#555;
+  --primary:#333;
+  --emerald:#555;
+  --purple:#666;
+  --border-color:rgba(0,0,0,.12);
+  --border-highlight:rgba(0,0,0,.28);
+  --shadow-glow:0 0 20px rgba(0,0,0,.08);
+}
+#modal-billing-automation .modal-container,
+#modal-billing-automation .modal-container:hover { color:#171717; background:#f1f1f0; border-color:#d0d0ce; }
+#modal-billing-automation .modal-header,
+#modal-billing-automation .modal-footer { background:#e5e5e3; border-color:#d0d0ce; }
+#modal-billing-automation .modal-section { color:#171717; background:#f8f8f7; border-color:#d7d7d5; }
+#modal-billing-automation .modal-section-title { color:#171717; border-color:#d7d7d5; }
+#modal-billing-automation .modal-section-title svg { color:#555; }
+#modal-billing-automation .tag-emerald,
+#modal-billing-automation .modal-status-badge,
+#modal-billing-automation .step-badge { color:#333; background:#e6e6e4; border-color:#cececc; }
+#modal-billing-automation .workflow-step,
+#modal-billing-automation .tech-pill { color:#242424; background:#e9e9e7; border-color:#d2d2d0; }
+#modal-billing-automation .modal-close,
+#modal-billing-automation .modal-close-btn,
+#modal-billing-automation .btn-secondary { color:#222; background:#f8f8f7; border-color:#cececc; }
+#modal-billing-automation .billing-description,
+#modal-billing-automation .billing-section-intro { color:#4e4e4e; font-size:.96rem; line-height:1.65; }
+#modal-billing-automation .billing-hero { display:flex; flex-direction:column; gap:10px; }
+#modal-billing-automation .billing-hero .modal-main-title { color:#171717; margin-bottom:0; }
+#modal-billing-automation .billing-hero .modal-tagline { color:#555; margin-bottom:0; }
+#modal-billing-automation .billing-hero-metrics { display:grid; grid-template-columns:1.35fr 1fr; gap:14px; margin-top:8px; }
+#modal-billing-automation .billing-hero-metric {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:6px;
+  min-height:100px;
+  padding:18px 20px;
+  border:1px solid #d3d3d1;
+  border-radius:14px;
+  background:#e9e9e7;
+}
+#modal-billing-automation .billing-hero-metric strong { color:#171717; font-size:1.8rem; line-height:1.1; }
+#modal-billing-automation .billing-hero-metric strong span { color:#777; }
+#modal-billing-automation .billing-hero-metric > span { color:#555; font-size:.86rem; }
+#modal-billing-automation .billing-hero-metric-accent { background:#dededc; }
+#modal-billing-automation .billing-hero-metric-accent strong { font-size:2.15rem; }
+#modal-billing-automation .billing-challenge-list,
+#modal-billing-automation .billing-compare-card ul {
+  display:grid;
+  gap:8px;
+  margin:12px 0 18px;
+  padding-left:22px;
+  color:#3e3e3e;
+  line-height:1.55;
+}
+#modal-billing-automation .billing-challenge-list li::marker,
+#modal-billing-automation .billing-compare-card li::marker { color:#777; }
+#modal-billing-automation .billing-manual-flow { display:flex; align-items:center; flex-wrap:wrap; gap:9px; }
+#modal-billing-automation .billing-manual-flow span {
+  flex:1 1 130px;
+  padding:10px 12px;
+  border:1px solid #d2d2d0;
+  border-radius:10px;
+  background:#ededeb;
+  color:#303030;
+  font-size:.82rem;
+  font-weight:600;
+  text-align:center;
+}
+#modal-billing-automation .billing-manual-flow b { color:#777; font-size:1rem; }
+#modal-billing-automation .billing-method-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+#modal-billing-automation .billing-method-grid .step-title { color:#222; }
+#modal-billing-automation .billing-method-grid .step-desc { color:#555; line-height:1.55; }
+#modal-billing-automation .billing-logic-layout { display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:stretch; }
+#modal-billing-automation .billing-name-example {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:7px;
+  padding:16px;
+  border:1px solid #d7d7d5;
+  border-radius:12px;
+  background:#ededeb;
+  color:#333;
+  font-family:ui-monospace,Consolas,monospace;
+  font-size:.88rem;
+}
+#modal-billing-automation .billing-name-example b { align-self:center; color:#777; font-size:1.25rem; }
+#modal-billing-automation .billing-name-example small { color:#666; font-family:var(--font-body); font-size:.8rem; }
+#modal-billing-automation .billing-name-example strong { color:#171717; font-size:1.2rem; }
+#modal-billing-automation .billing-code-panel { overflow:hidden; border:1px solid #292929; border-radius:12px; background:#181818; }
+#modal-billing-automation .billing-code-label { display:block; padding:10px 14px; border-bottom:1px solid #333; color:#bdbdbd; font:600 .75rem ui-monospace,Consolas,monospace; }
+#modal-billing-automation .billing-code-panel pre { overflow:auto; padding:20px 16px; color:#f0f0f0; font: .88rem/1.7 ui-monospace,Consolas,monospace; }
+#modal-billing-automation .billing-anonymized-note { margin-top:12px; color:#666; font-size:.8rem; font-style:italic; }
+#modal-billing-automation .billing-compare-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+#modal-billing-automation .billing-compare-card { padding:18px; border:1px solid #d5d5d3; border-radius:12px; background:#ededeb; }
+#modal-billing-automation .billing-compare-card h4 { color:#333; font-size:.8rem; letter-spacing:.08em; text-transform:uppercase; }
+#modal-billing-automation .billing-compare-card > strong { display:block; margin:6px 0 12px; color:#171717; font-size:1.8rem; }
+#modal-billing-automation .billing-compare-card ul { margin-bottom:0; font-size:.88rem; }
+#modal-billing-automation .billing-after-card { background:#e3e3e1; border-color:#c9c9c7; }
+#modal-billing-automation .billing-results-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+#modal-billing-automation .billing-results-grid article { display:flex; flex-direction:column; justify-content:center; gap:7px; min-height:104px; padding:16px; border:1px solid #d5d5d3; border-radius:12px; background:#ededeb; }
+#modal-billing-automation .billing-results-grid strong { color:#171717; font-size:1.65rem; line-height:1.1; }
+#modal-billing-automation .billing-results-grid span { color:#555; font-size:.82rem; line-height:1.4; }
+#modal-billing-automation .billing-impact-copy { margin-top:16px; }
+#modal-billing-automation .billing-closing-section { border-left:3px solid #888; }
+
+@media (max-width:640px) {
+  #projects .billing-cover { flex-direction:column; }
+  #projects .billing-cover-panel { width:100%; min-height:104px; }
+  #projects .billing-cover-arrow { transform:rotate(90deg); }
+  #modal-billing-automation .billing-hero-metrics,
+  #modal-billing-automation .billing-method-grid,
+  #modal-billing-automation .billing-logic-layout,
+  #modal-billing-automation .billing-compare-grid { grid-template-columns:1fr; }
+  #modal-billing-automation .billing-results-grid { grid-template-columns:1fr; }
+  #modal-billing-automation .billing-results-grid article { min-height:80px; }
+  #modal-billing-automation .billing-case-section { padding:18px; }
+}
