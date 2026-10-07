@@ -19,6 +19,7 @@ const i18nTranslations = {
     nav_skills: "Habilidades",
     nav_projects: "Proyectos",
     nav_contact: "Contacto",
+    intro_title: "Portfolio de Celina Sosa",
     aria_logo: "Ir al inicio",
     aria_nav: "Navegación principal",
     aria_hamburger: "Abrir menú de navegación",
@@ -30,15 +31,18 @@ const i18nTranslations = {
     // Hero Section
     hero_badge: "Disponible para nuevos proyectos",
     hero_title: 'Data Analyst <br><span class="gradient-text">& Economista</span>',
-    hero_desc: "Analista de Datos con base en Economía combino el análisis cuantitativo, la modelación de datos y el desarrollo web para crear productos digitales con impacto de negocio.",
+    hero_title_line1: "Economista",
+    hero_title_line2: "y analista de datos",
+    cv_download: "CV",
+    cv_title: "Descargar CV en español",
+    agent_welcome: "¡Bienvenido al portfolio de Celina Sosa!",
+    video_label: "Presentación",
+    video_placeholder: "Video de presentación próximamente",
+    hero_desc: "Transformo datos en información relevante mediante el análisis cuantitativo, la interpretación económica y herramientas tecnológicas para generar insights que apoyen la toma de decisiones.",
     hero_cta_projects: "Ver Proyectos",
     hero_cta_contact: "Contactarme",
     hero_stat_1_label: "Años de Experiencia",
-    hero_stat_2_label: "Vanilla JS & Clean Code",
     hero_stat_3_label: "Python & SQL",
-    code_card_role: "Economista, Data Analyst & Frontend Developer",
-    code_card_passion: "Construir la web inteligente",
-    code_card_comment: "// Ejecutar transformación de datos a valor",
 
     // About Section
     about_subtitle: "Trayectoria & Enfoque",
@@ -65,23 +69,18 @@ const i18nTranslations = {
     skills_item_econ_title: "Análisis Económico",
     skills_item_econ_desc: 'Modelos Cuantitativos <span class="skill-desc-bullet">·</span> Interpretación de KPIs <span class="skill-desc-bullet">·</span> Toma de Decisiones',
     skills_item_bi_desc: 'Power BI <span class="skill-desc-bullet">·</span> Reportes Financieros <span class="skill-desc-bullet">·</span> Indicadores Clave',
-    skills_cat4_title: "Frontend Development",
-    skills_item_fe_desc: 'Responsive Design <span class="skill-desc-bullet">·</span> Web Layouts <span class="skill-desc-bullet">·</span> UI Development',
-    skills_item_js_desc: 'DOM Manipulation <span class="skill-desc-bullet">·</span> Interactive Interfaces',
     skills_badges_title: "Tecnologías Principales",
 
     // Projects Section
     projects_subtitle: "Portafolio de Trabajos",
     projects_title: "Proyectos Destacados",
     filter_all: "Todos",
-    filter_web: "Desarrollo Web",
     filter_data: "Análisis de Datos",
     filter_cleaning: "Limpieza de Datos",
     tag_cleaning: "Limpieza de Datos",
     tag_data: "Análisis de Datos",
     tag_data_bi: "Análisis de Datos & BI",
     tag_econometrics: "Análisis Económico",
-    tag_web: "Desarrollo Web",
     btn_view_project: "Ver Proyecto",
     btn_github: "Código en GitHub",
     demo_alert: "Demostración interactiva en línea",
@@ -90,12 +89,8 @@ const i18nTranslations = {
     p1_desc: "Pipeline automatizado para depuración, detección de valores nulos/anómalos, reconocimiento de localidades y empresas utilizando Python (Pandas y Numpy).",
     p2_title: "Análisis de la Producción de Gas en Argentina",
     p2_desc: "Estudio económico y visualización interactiva sobre la evolución de la producción de gas en Argentina, enfocado en el impacto de Vaca Muerta y el perfil de las empresas operadoras",
-    p3_title: "E-Commerce Web Application (Vanilla JS)",
-    p3_desc: "Tienda en línea completa construida sin frameworks. Incluye catálogo interactivo, filtro dinámico por productos, carrito de compras con persistencia en localStorage.",
     p4_title: "Pipeline ETL & Análisis de Tendencias de Mercado",
     p4_desc: "Solución automatizada de extracción y limpieza de datos con Python SQL alchemy, análisis estadístico multivariable e informes dinámicos de proyección.",
-    p5_title: "SaaS Product Landing & Analytics Interface",
-    p5_desc: "Página de aterrizaje de alto rendimiento optimizada para conversión y SEO. Diseño responsive moderno con glassmorphism y animaciones suaves en CSS/JS.",
 
     // Contact Section
     contact_subtitle: "¿Tienes un proyecto en mente?",
@@ -128,7 +123,7 @@ const i18nTranslations = {
     // Toast & Footer
     toast_title: "¡Mensaje Enviado!",
     toast_desc: "Gracias por contactarte. Te responderé pronto.",
-    footer_rights: "Todos los derechos reservados. Diseñado & desarrollado con Vanilla Web Stack.",
+    footer_rights: "Todos los derechos reservados. Portfolio profesional de Economía y Análisis de Datos.",
 
     // Modal Project 5
     modal_tag: "Limpieza & Transformación de Datos",
@@ -215,6 +210,7 @@ const i18nTranslations = {
     nav_skills: "Skills",
     nav_projects: "Projects",
     nav_contact: "Contact",
+    intro_title: "Celina Sosa's Portfolio",
     aria_logo: "Go to home",
     aria_nav: "Main navigation",
     aria_hamburger: "Open navigation menu",
@@ -226,15 +222,19 @@ const i18nTranslations = {
     // Hero Section
     hero_badge: "Available for new projects",
     hero_title: 'Data Analyst <br><span class="gradient-text">& Economist</span>',
-    hero_desc: "Data Analyst with an Economics background and Frontend Development capabilities. I combine quantitative analysis, data modeling, and web development to build digital products with business impact.",
+    hero_title_line1: "Economist",
+    hero_title_line2: "and data analyst",
+    cv_download: "CV",
+    cv_title: "Download CV in English",
+    agent_welcome: "Welcome to Celina Sosa's portfolio!",
+    video_label: "Introduction",
+    video_placeholder: "Introduction video coming soon",
+    hero_desc: "I transform data into meaningful information through quantitative analysis, economic interpretation, and data tools to generate insights that support decision-making.",
     hero_cta_projects: "View Projects",
     hero_cta_contact: "Contact Me",
     hero_stat_1_label: "Years of Experience",
     hero_stat_2_label: "Vanilla JS & Clean Code",
     hero_stat_3_label: "Python & SQL",
-    code_card_role: "Economist, Data Analyst & Frontend Developer",
-    code_card_passion: "Building the intelligent web",
-    code_card_comment: "// Execute data-to-value transformation",
 
     // About Section
     about_subtitle: "Career & Focus",
@@ -261,23 +261,18 @@ const i18nTranslations = {
     skills_item_econ_title: "Economic Analysis",
     skills_item_econ_desc: 'Quantitative Models <span class="skill-desc-bullet">·</span> KPI Interpretation <span class="skill-desc-bullet">·</span> Decision Making',
     skills_item_bi_desc: 'Power BI <span class="skill-desc-bullet">·</span> Financial Reports <span class="skill-desc-bullet">·</span> Key Metrics',
-    skills_cat4_title: "Frontend Development",
-    skills_item_fe_desc: 'Responsive Design <span class="skill-desc-bullet">·</span> Web Layouts <span class="skill-desc-bullet">·</span> UI Development',
-    skills_item_js_desc: 'DOM Manipulation <span class="skill-desc-bullet">·</span> Interactive Interfaces',
     skills_badges_title: "Core Technologies",
 
     // Projects Section
     projects_subtitle: "Portfolio of Work",
     projects_title: "Featured Projects",
     filter_all: "All",
-    filter_web: "Web Development",
     filter_data: "Data Analytics",
     filter_cleaning: "Data Cleaning",
     tag_cleaning: "Data Cleaning",
     tag_data: "Data Analytics",
     tag_data_bi: "Data Analytics & BI",
     tag_econometrics: "Econometric Analysis",
-    tag_web: "Web Development",
     btn_view_project: "View Project",
     btn_github: "GitHub Code",
     demo_alert: "Online interactive demonstration",
@@ -286,12 +281,8 @@ const i18nTranslations = {
     p1_desc: "Automated pipeline for data scrubbing, null/outlier detection, city and company entity recognition using Python (Pandas & NumPy).",
     p2_title: "Hydrocarbon Industry Analysis in Argentina (Oil & Gas)",
     p2_desc: "Econometric study and interactive visualization on natural gas and crude oil production trends in Argentina, focusing on Vaca Muerta and top basins & operators.",
-    p3_title: "E-Commerce Web Application (Vanilla JS)",
-    p3_desc: "Full-featured online store built without frameworks. Includes interactive catalog, dynamic product filtering, and shopping cart persisted in localStorage.",
     p4_title: "ETL Pipeline & Market Trend Analysis",
     p4_desc: "Automated extraction and data cleaning solution using Python SQLAlchemy, multivariable statistical analysis, and dynamic forecast reports.",
-    p5_title: "SaaS Product Landing & Analytics Interface",
-    p5_desc: "High-performance landing page optimized for conversion and SEO. Modern responsive design featuring glassmorphism and smooth CSS/JS animations.",
 
     // Contact Section
     contact_subtitle: "Have a project in mind?",
@@ -324,7 +315,7 @@ const i18nTranslations = {
     // Toast & Footer
     toast_title: "Message Sent!",
     toast_desc: "Thank you for reaching out. I'll get back to you soon.",
-    footer_rights: "All rights reserved. Designed & developed with Vanilla Web Stack.",
+    footer_rights: "All rights reserved. Economics and Data Analytics portfolio.",
 
     // Modal Project 5
     modal_tag: "Data Cleaning & Transformation",
@@ -406,6 +397,13 @@ const i18nTranslations = {
 };
 
 let currentLang = 'es';
+
+// Add the YouTube video IDs here when the Spanish and English introductions are published.
+const presentationVideoIds = { es: '', en: '' };
+const cvLinks = {
+  es: 'https://drive.google.com/file/d/1ztenCjvFiGhEvRjSkT341lJu-cEthqbt/view?usp=sharing',
+  en: 'https://drive.google.com/file/d/1S5u5bYizFXimYEpnJQ8gBv2rCccTiJfX/view?usp=sharing'
+};
 
 function getCurrentLang() {
   return currentLang;
@@ -504,6 +502,28 @@ function initLanguageToggle() {
     const dict = i18nTranslations[lang];
     if (!dict) return;
 
+    const cvLink = document.querySelector('[data-cv-link]');
+    if (cvLink) {
+      cvLink.href = cvLinks[lang];
+      cvLink.setAttribute('aria-label', dict.cv_title);
+    }
+    const presentationVideo = document.getElementById('about-video');
+    const videoPlaceholder = document.getElementById('video-placeholder');
+    const videoLanguage = document.getElementById('video-language');
+    const videoId = presentationVideoIds[lang];
+    if (videoLanguage) videoLanguage.textContent = lang.toUpperCase();
+    if (presentationVideo && videoPlaceholder) {
+      if (videoId) {
+        presentationVideo.src = `https://www.youtube-nocookie.com/embed/${videoId}`;
+        presentationVideo.hidden = false;
+        videoPlaceholder.hidden = true;
+      } else {
+        presentationVideo.src = '';
+        presentationVideo.hidden = true;
+        videoPlaceholder.hidden = false;
+      }
+    }
+
     // Actualizar elementos de texto (data-i18n)
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
@@ -552,13 +572,6 @@ function initLanguageToggle() {
       }
     });
 
-    // Actualizar strings dinámicos de la tarjeta de código Hero
-    const codeRole = document.getElementById('code-card-role');
-    const codePassion = document.getElementById('code-card-passion');
-    const codeComment = document.getElementById('code-card-comment');
-    if (codeRole) codeRole.textContent = `"${dict.code_card_role}"`;
-    if (codePassion) codePassion.textContent = `"${dict.code_card_passion}"`;
-    if (codeComment) codeComment.textContent = dict.code_card_comment;
   }
 }
 
@@ -698,7 +711,7 @@ function initSmoothScrollAndActiveNav() {
 }
 
 /* --------------------------------------------------------------------------
-   4. FILTRO DE PROYECTOS (TODOS / DESARROLLO WEB / ANÁLISIS DE DATOS / LIMPIEZA DE DATOS)  
+   4. FILTRO DE PROYECTOS (TODOS / ANÁLISIS DE DATOS / LIMPIEZA DE DATOS)  
    -------------------------------------------------------------------------- */
 function initProjectFilters() {
   const filterBtns = document.querySelectorAll('.filter-btn');

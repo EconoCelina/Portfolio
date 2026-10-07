@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap"
     rel="stylesheet">
 
   <!-- CSS Principal -->
@@ -30,7 +30,7 @@
   <header class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="#hero" class="brand-logo" aria-label="Ir al inicio" data-i18n-aria="aria_logo">
-        <span class="brand-accent">&lt;</span>Economist<span class="brand-highlight">.Data</span><span
+        <span class="brand-accent">&lt;</span>Portfolio<span class="brand-highlight"> Celina Sosa</span><span
           class="brand-accent">
           /&gt;</span>
       </a>
@@ -40,8 +40,8 @@
         <ul class="nav-list">
           <li class="nav-item"><a href="#hero" class="nav-link active" data-i18n="nav_home">Inicio</a></li>
           <li class="nav-item"><a href="#about" class="nav-link" data-i18n="nav_about">Sobre mí</a></li>
-          <li class="nav-item"><a href="#skills" class="nav-link" data-i18n="nav_skills">Habilidades</a></li>
           <li class="nav-item"><a href="#projects" class="nav-link" data-i18n="nav_projects">Proyectos</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link" data-i18n="nav_skills">Habilidades</a></li>
           <li class="nav-item"><a href="#contact" class="nav-link" data-i18n="nav_contact">Contacto</a></li>
         </ul>
       </nav>
@@ -55,27 +55,6 @@
           <span class="lang-option lang-en">EN</span>
         </button>
 
-        <!-- Botón Cambio de Tema Light/Dark -->
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar a modo claro" title="Cambiar tema">
-          <!-- Icono Sol (Modo Claro) -->
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <!-- Icono Luna (Modo Oscuro) -->
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </button>
 
         <!-- Botón Hamburguesa Móvil -->
         <button id="hamburger-btn" class="hamburger-btn" aria-label="Abrir menú de navegación" aria-expanded="false"
@@ -91,80 +70,35 @@
   <main>
     <!-- Sección Principal (Hero) -->
     <section id="hero" class="hero-section">
+      <div class="hero-waves" aria-hidden="true">
+        <img class="hero-wave hero-wave-soft" src="assets/hero-wave-soft.jpeg" alt="">
+        <img class="hero-wave hero-wave-mesh" src="assets/hero-wave-mesh.jpeg" alt="">
+      </div>
+      <div class="hero-intro">
+        <div class="hero-intro-copy">
+          <h2 data-i18n="intro_title">Portfolio de Celina Sosa</h2>
+        </div>
+        <div class="hero-intro-visual"><img src="assets/motion.gif" alt="" fetchpriority="high"></div>
+      </div>
       <div class="container hero-grid">
         <div class="hero-content">
-          <div class="badge-pill">
-            <span class="status-dot"></span> <span data-i18n="hero_badge">Disponible para nuevos proyectos</span>
-          </div>
-          <h1 class="hero-title" data-i18n-html="hero_title">
-            Data Analyst <br>
-            <span class="gradient-text">& Economista</span>
-          </h1>
-          <p class="hero-description" data-i18n="hero_desc">
-            Analista de Datos con base en Economía, combino el análisis
-            cuantitativo, la modelación de datos y el desarrollo web para crear productos digitales con impacto de
-            negocio.
-          </p>
+          <div class="badge-pill"><span class="status-dot"></span><span data-i18n="hero_badge">Disponible para nuevos
+              proyectos</span></div>
+          <h1 class="hero-title"><span data-i18n="hero_title_line1">Economista</span><br><span
+              class="gradient-text role-code-font" data-i18n="hero_title_line2">y analista de datos</span></h1>
+          <p class="hero-description" data-i18n="hero_desc">Transformo datos en información relevante mediante el
+            análisis cuantitativo, la interpretación económica y herramientas tecnológicas para generar insights que
+            apoyen la toma de decisiones.</p>
           <div class="hero-cta-group">
-            <a href="#projects" class="btn btn-primary">
-              <span data-i18n="hero_cta_projects">Ver Proyectos</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-            <a href="#contact" class="btn btn-outline">
-              <span data-i18n="hero_cta_contact">Contactarme</span>
-            </a>
-          </div>
-
-
-
-          <div class="hero-visual">
-            <div class="code-card-wrapper">
-              <div class="code-card-header">
-                <div class="window-dots">
-                  <span class="dot red"></span>
-                  <span class="dot yellow"></span>
-                  <span class="dot green"></span>
-                </div>
-                <span class="window-title">analyst_profile</span>
-              </div>
-              <div class="code-card-body">
-                <pre><code><span class="code-keyword">const</span> <span class="code-variable">analyst</span> = {
-  <span class="code-prop">name</span>: <span class="code-string">"Celina Sosa"</span>,
-  <span class="code-prop">role</span>: <span class="code-string" id="code-card-role">"Economista, Data Analyst & Frontend Developer"</span>,
-  <span class="code-prop">coreSkills</span>: [
-    <span class="code-string">"Python"</span>, <span class="code-string">"SQL"</span>, <span class="code-string">"Power BI & Data Studio"</span>,
-    <span class="code-string">"HTML"</span>, <span class="code-string">"CSS"</span>, <span class="code-string">"JavaScript"</span>
-  ],
-  <span class="code-prop">passion</span>: <span class="code-string" id="code-card-passion">"Construir la web inteligente"</span>,
-  <span class="code-prop">status</span>: <span class="code-string">"Ready to Code & Analyze 🚀"</span>
-};
-
-<span class="code-comment" id="code-card-comment">// Ejecutar transformación de datos a valor</span>
-<span class="code-variable">developer</span>.<span class="code-method">buildImpactfulApps</span>();</code></pre>
-              </div>
-              <!-- Dynamic floating badges -->
-              <div class="floating-badge badge-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                </svg>
-                <span>Data Analytics</span>
-              </div>
-              <div class="floating-badge badge-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                  <polyline points="2 17 12 22 22 17"></polyline>
-                  <polyline points="2 12 12 17 22 12"></polyline>
-                </svg>
-              </div>
-            </div>
+            <a href="#projects" class="btn btn-primary"><span data-i18n="hero_cta_projects">Ver Proyectos</span></a>
+            <a href="#contact" class="btn btn-outline"><span data-i18n="hero_cta_contact">Contactarme</span></a>
+            <a class="btn btn-outline cv-button" data-cv-link
+              href="https://drive.google.com/file/d/1ztenCjvFiGhEvRjSkT341lJu-cEthqbt/view?usp=sharing" target="_blank"
+              rel="noopener noreferrer" data-i18n="cv_download" data-i18n-title="cv_title"
+              title="Descargar CV en español">CV</a>
           </div>
         </div>
+      </div>
     </section>
 
     <!-- Sección Sobre Mí -->
@@ -176,148 +110,70 @@
           <div class="title-underline"></div>
         </div>
 
-        <div class="about-grid">
-          <div class="about-card glass-card">
-            <div class="about-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-            </div>
-            <h3 data-i18n="about_card1_title">Perspectiva Económica</h3>
-            <p data-i18n="about_card1_desc">
-              Mi formación en Economía me permite interpretar los datos dentro del contexto en el que se generan,
-              incorporando una perspectiva micro y macroeconómica, modelos cuantitativos y una comprensión de los
-              incentivos y relaciones que existen detrás de los números.
-            </p>
-          </div>
-
-          <div class="about-card glass-card">
-            <div class="about-icon icon-emerald">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="18" y1="20" x2="18" y2="10"></line>
-                <line x1="12" y1="20" x2="12" y2="4"></line>
-                <line x1="6" y1="20" x2="6" y2="14"></line>
-              </svg>
-            </div>
-            <h3 data-i18n="about_card2_title">Data & Business Intelligence</h3>
-            <p data-i18n="about_card2_desc">
-              A partir de herramientas como Python, SQL, R y Power BI, transformo datos en información útil mediante
-              procesos de limpieza, análisis, visualización y construcción
-              de KPIs, buscando responder preguntas concretas y facilitar la toma de decisiones.
-            </p>
-          </div>
-
-          <div class="about-card glass-card">
-            <div class="about-icon icon-purple">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-                <line x1="9" y1="9" x2="9.01" y2="9"></line>
-                <line x1="15" y1="9" x2="15.01" y2="9"></line>
-              </svg>
-            </div>
-            <h3 data-i18n="about_card3_title">Tecnología</h3>
-            <p data-i18n="about_card3_desc">
-              Me interesa especialmente cómo los avances tecnológicos están transformando la forma en que recopilamos,
-              analizamos e interpretamos información, y cómo estas herramientas pueden potenciar el análisis económico.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección Habilidades -->
-    <section id="skills" class="section bg-surface-alt">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="section-subtitle" data-i18n="skills_subtitle">Stack Tecnológico</span>
-          <h2 class="section-title" data-i18n="skills_title">Mis Habilidades</h2>
-          <div class="title-underline"></div>
-        </div>
-
-        <!-- Grilla Compacta de Habilidades (Category Cards) -->
-        <div class="skills-compact-grid">
-
-          <!-- Categoria 1: Data Analytics -->
-          <div class="skill-category-card glass-card">
-            <div class="category-header">
-              <span class="category-icon">📊</span>
-              <h3 class="category-title" data-i18n="skills_cat1_title">Data Analytics & Science</h3>
-            </div>
-            <div class="skills-list">
-              <div class="skill-item">
-                <span class="skill-tech-name">Python & Pandas</span>
-                <span class="skill-desc" data-i18n-html="skills_item_py_desc">Data Cleaning <span
-                    class="skill-desc-bullet">·</span> Exploratory Analysis
-                  <span class="skill-desc-bullet">·</span> ETL</span>
+        <div class="about-layout">
+          <div class="about-copy">
+            <div class="about-card glass-card">
+              <div class="about-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
               </div>
-              <div class="skill-item">
-                <span class="skill-tech-name" data-i18n="skills_item_vis_title">Visualización de Datos</span>
-                <span class="skill-desc" data-i18n-html="skills_item_vis_desc">Matplotlib <span
-                    class="skill-desc-bullet">·</span> Seaborn <span class="skill-desc-bullet">·</span>
-                  Dashboards</span>
+              <h3 data-i18n="about_card1_title">Perspectiva Económica</h3>
+              <p data-i18n="about_card1_desc">
+                Mi formación en Economía me permite interpretar los datos dentro del contexto en el que se generan,
+                incorporando una perspectiva micro y macroeconómica, modelos cuantitativos y una comprensión de los
+                incentivos y relaciones que existen detrás de los números.
+              </p>
+            </div>
+
+            <div class="about-card glass-card">
+              <div class="about-icon icon-emerald">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
               </div>
+              <h3 data-i18n="about_card2_title">Data & Business Intelligence</h3>
+              <p data-i18n="about_card2_desc">
+                A partir de herramientas como Python, SQL, R y Power BI, transformo datos en información útil mediante
+                procesos de limpieza, análisis, visualización y construcción
+                de KPIs, buscando responder preguntas concretas y facilitar la toma de decisiones.
+              </p>
+            </div>
+
+            <div class="about-card glass-card">
+              <div class="about-icon icon-purple">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                  <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                  <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                </svg>
+              </div>
+              <h3 data-i18n="about_card3_title">Tecnología</h3>
+              <p data-i18n="about_card3_desc">
+                Me interesa especialmente cómo los avances tecnológicos están transformando la forma en que recopilamos,
+                analizamos e interpretamos información, y cómo estas herramientas pueden potenciar el análisis
+                económico.
+              </p>
             </div>
           </div>
-
-          <!-- Categoria 2: Bases de Datos -->
-          <div class="skill-category-card glass-card">
-            <div class="category-header">
-              <span class="category-icon">🗄️</span>
-              <h3 class="category-title" data-i18n="skills_cat2_title">Bases de Datos & SQL</h3>
-            </div>
-            <div class="skills-list">
-              <div class="skill-item">
-                <span class="skill-tech-name">SQL</span>
-                <span class="skill-desc" data-i18n-html="skills_item_sql_desc">Consultas Complejas <span
-                    class="skill-desc-bullet">·</span> Joins &
-                  Aggregations <span class="skill-desc-bullet">·</span> Normalización</span>
-              </div>
-              <div class="skill-item">
-                <span class="skill-tech-name" data-i18n="skills_item_git_title">Git & Control de Versiones</span>
-                <span class="skill-desc" data-i18n-html="skills_item_git_desc">Flujo de Ramas <span
-                    class="skill-desc-bullet">·</span> Commits <span class="skill-desc-bullet">·</span> Repositorios
-                  GitHub</span>
+          <div class="about-video-column">
+            <div class="video-heading"><span class="section-subtitle" data-i18n="video_label">Presentación</span><span
+                class="video-language" id="video-language">ES</span></div>
+            <div class="video-frame" id="video-frame">
+              <iframe id="about-video" title="Video de presentación de Celina Sosa" src=""
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen hidden></iframe>
+              <div class="video-placeholder" id="video-placeholder"><span class="play-icon">▶</span>
+                <p data-i18n="video_placeholder">Video de presentación próximamente</p>
               </div>
             </div>
-          </div>
-
-          <!-- Categoria 3: Economía & BI -->
-          <div class="skill-category-card glass-card">
-            <div class="category-header">
-              <span class="category-icon">📈</span>
-              <h3 class="category-title" data-i18n="skills_cat3_title">Economía & BI</h3>
-            </div>
-            <div class="skills-list">
-              <div class="skill-item">
-                <span class="skill-tech-name" data-i18n="skills_item_econ_title">Análisis Económico</span>
-                <span class="skill-desc" data-i18n-html="skills_item_econ_desc">Modelos Cuantitativos <span
-                    class="skill-desc-bullet">·</span> Interpretación
-                  de KPIs <span class="skill-desc-bullet">·</span> Toma de Decisiones</span>
-              </div>
-              <div class="skill-item">
-                <span class="skill-tech-name">Business Intelligence</span>
-                <span class="skill-desc" data-i18n-html="skills_item_bi_desc">Power BI <span
-                    class="skill-desc-bullet">·</span> Reportes Financieros <span class="skill-desc-bullet">·</span>
-                  Indicadores Clave</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Badges de Tecnologías -->
-        <div class="tech-badges-wrapper">
-          <h4 class="badges-title" data-i18n="skills_badges_title">Tecnologías Principales</h4>
-          <div class="tech-badges-container">
-            <span class="tech-badge"><i class="badge-dot"></i> Python</span>
-            <span class="tech-badge"><i class="badge-dot"></i> SQL</span>
-            <span class="tech-badge"><i class="badge-dot"></i> Pandas</span>
-            <span class="tech-badge"><i class="badge-dot"></i> Matplotlib / Seaborn</span>
-            <span class="tech-badge"><i class="badge-dot"></i> Git & GitHub</span>
           </div>
         </div>
       </div>
@@ -423,7 +279,10 @@
           <article class="project-card glass-card" data-category="data">
             <div class="project-image-container">
               <div class="project-illustration illustration-petroleum">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" width="100%" height="100%">
+                <img class="project-cover-image" src="assets/dashboard_gas.jpeg"
+                  alt="Dashboard de análisis de producción de gas" loading="lazy">
+                <svg class="project-cover-fallback" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220"
+                  width="100%" height="100%">
                   <defs>
                     <linearGradient id="petroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" stop-color="#0f172a" />
@@ -473,9 +332,119 @@
               </div>
             </div>
           </article>
+          <article class="project-card glass-card" data-category="data">
+            <div class="project-image-container">
+              <div class="project-cover cover-etl">
+                <div class="etl-node">CSV</div>
+                <div class="etl-line"></div>
+                <div class="etl-node etl-node-main">ETL</div>
+                <div class="etl-line"></div>
+                <div class="etl-node">SQL</div>
+                <div class="etl-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              </div><span class="project-category-tag" data-i18n="tag_data">Análisis de Datos</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title" data-i18n="p4_title">Pipeline ETL & Análisis de Tendencias de Mercado</h3>
+              <p class="project-description" data-i18n="p4_desc">Extracción automatizada, limpieza y análisis de
+                tendencias con reportes dinámicos.</p>
+              <div class="project-techs"><span class="tag">Python</span><span class="tag">SQLAlchemy</span><span
+                  class="tag">ETL</span></div>
+            </div>
+          </article>
 
+        </div>
+      </div>
+    </section>
 
+    <!-- Sección Habilidades -->
+    <section id="skills" class="section bg-surface-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle" data-i18n="skills_subtitle">Stack Tecnológico</span>
+          <h2 class="section-title" data-i18n="skills_title">Mis Habilidades</h2>
+          <div class="title-underline"></div>
+        </div>
 
+        <!-- Grilla Compacta de Habilidades (Category Cards) -->
+        <div class="skills-compact-grid">
+
+          <!-- Categoria 1: Data Analytics -->
+          <div class="skill-category-card glass-card">
+            <div class="category-header">
+              <span class="category-icon">📊</span>
+              <h3 class="category-title" data-i18n="skills_cat1_title">Data Analytics & Science</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-item">
+                <span class="skill-tech-name">Python & Pandas</span>
+                <span class="skill-desc" data-i18n-html="skills_item_py_desc">Data Cleaning <span
+                    class="skill-desc-bullet">·</span> Exploratory Analysis
+                  <span class="skill-desc-bullet">·</span> ETL</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-tech-name" data-i18n="skills_item_vis_title">Visualización de Datos</span>
+                <span class="skill-desc" data-i18n-html="skills_item_vis_desc">Matplotlib <span
+                    class="skill-desc-bullet">·</span> Seaborn <span class="skill-desc-bullet">·</span>
+                  Dashboards</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categoria 2: Bases de Datos -->
+          <div class="skill-category-card glass-card">
+            <div class="category-header">
+              <span class="category-icon">🗄️</span>
+              <h3 class="category-title" data-i18n="skills_cat2_title">Bases de Datos & SQL</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-item">
+                <span class="skill-tech-name">SQL</span>
+                <span class="skill-desc" data-i18n-html="skills_item_sql_desc">Consultas Complejas <span
+                    class="skill-desc-bullet">·</span> Joins &
+                  Aggregations <span class="skill-desc-bullet">·</span> Normalización</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-tech-name" data-i18n="skills_item_git_title">Git & Control de Versiones</span>
+                <span class="skill-desc" data-i18n-html="skills_item_git_desc">Flujo de Ramas <span
+                    class="skill-desc-bullet">·</span> Commits <span class="skill-desc-bullet">·</span> Repositorios
+                  GitHub</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categoria 3: Economía & BI -->
+          <div class="skill-category-card glass-card">
+            <div class="category-header">
+              <span class="category-icon">📈</span>
+              <h3 class="category-title" data-i18n="skills_cat3_title">Economía & BI</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-item">
+                <span class="skill-tech-name" data-i18n="skills_item_econ_title">Análisis Económico</span>
+                <span class="skill-desc" data-i18n-html="skills_item_econ_desc">Modelos Cuantitativos <span
+                    class="skill-desc-bullet">·</span> Interpretación
+                  de KPIs <span class="skill-desc-bullet">·</span> Toma de Decisiones</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-tech-name">Business Intelligence</span>
+                <span class="skill-desc" data-i18n-html="skills_item_bi_desc">Power BI <span
+                    class="skill-desc-bullet">·</span> Reportes Financieros <span class="skill-desc-bullet">·</span>
+                  Indicadores Clave</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Badges de Tecnologías -->
+        <div class="tech-badges-wrapper">
+          <h4 class="badges-title" data-i18n="skills_badges_title">Tecnologías Principales</h4>
+          <div class="tech-badges-container">
+            <span class="tech-badge"><i class="badge-dot"></i> Python</span>
+            <span class="tech-badge"><i class="badge-dot"></i> SQL</span>
+            <span class="tech-badge"><i class="badge-dot"></i> Pandas</span>
+            <span class="tech-badge"><i class="badge-dot"></i> Matplotlib / Seaborn</span>
+            <span class="tech-badge"><i class="badge-dot"></i> Git & GitHub</span>
+          </div>
         </div>
       </div>
     </section>
@@ -602,7 +571,7 @@
     <div class="container footer-content">
       <div class="footer-brand">
         <a href="#hero" class="brand-logo" aria-label="Ir al inicio" data-i18n-aria="aria_logo">
-          <span class="brand-accent">&lt;</span>Economist<span class="brand-highlight">.Data</span><span
+          <span class="brand-accent">&lt;</span>Portfolio<span class="brand-highlight"> Celina Sosa</span><span
             class="brand-accent">
             /&gt;</span>
         </a>
@@ -618,7 +587,7 @@
 
       <div class="footer-bottom">
         <p>&copy; <span id="current-year">2026</span> <span data-i18n="footer_rights">Todos los derechos reservados.
-            Diseñado & desarrollado con Vanilla Web Stack.</span></p>
+            Portfolio profesional de Economía y Análisis de Datos.</span></p>
       </div>
     </div>
   </footer>
