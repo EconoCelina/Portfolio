@@ -2980,3 +2980,24 @@ body { background-color:var(--bg-main); }
   #projects .etl-image-container { min-height:370px; }
   #projects .etl-cover { min-height:370px; }
 }
+
+/* Keep the main technology badges distinct from the light skills panel. */
+[data-theme="light"] .tech-badges-wrapper {
+  background:#e7e7e5;
+  border-color:#cececc;
+}
+[data-theme="light"] .tech-badges-wrapper .badges-title { color:#171717; }
+[data-theme="light"] .tech-badges-wrapper .tech-badge {
+  padding:9px 18px;
+  color:#222;
+  background:#f8f8f7;
+  border-color:#bdbdbb;
+  box-shadow:0 2px 5px rgba(0,0,0,.07);
+}
+[data-theme="light"] .tech-badges-wrapper .badge-dot { background:#555; }
+[data-theme="light"] .tech-badges-wrapper .tech-badge:hover {
+  color:#f8f8f7;
+  background:#292929;
+  border-color:#292929;
+}
+[data-theme="light"] .tech-badges-wrapper .tech-badge:hover .badge-dot { background:#f8f8f7; }
