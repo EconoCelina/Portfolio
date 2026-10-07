@@ -199,16 +199,11 @@ const i18nTranslations = {
     modal_petro_step2_title: "Limpieza & ETL en Python",
     modal_petro_step2_desc: "Normalización de nombres de yacimientos, tratamiento de registros nulos, estandarización de unidades de medida (Mm3/día para gas y m3/día para petróleo).",
     modal_petro_step3_badge: "Paso 3",
-    modal_petro_step3_title: "Modelado de Datos",
-    modal_petro_step3_desc: "Estructuración de esquemas en estrella (Star Schema) en Power BI uniendo tablas de Hechos (Producción mensual) con Dimensiones (Empresas, Cuencas, Yacimientos, Ubicación Geográfica).",
+    modal_petro_step3_title: "Modelado y estructura de datos",
+    modal_petro_step3_desc: "Diseño de una estructura de datos en Looker Studio, relacionando información de producción con dimensiones de empresas, yacimientos y ubicación geográfica.",
     modal_petro_step4_badge: "Paso 4",
-    modal_petro_step4_title: "Métricas DAX",
-    modal_petro_step4_desc: "Creación de medidas dinámicas para calcular variaciones interanuales (YoY), acumulados anuales (YTD) y porcentaje de participación no convencional.",
-    modal_petro_sec_value: "Valor para el Negocio & Conclusiones",
-    modal_petro_val1_title: "Impacto en Soberanía Energética",
-    modal_petro_val1_desc: "Permite evaluar el impacto de las inversiones estratégicas en Vaca Muerta sobre la soberanía energética y la balanza comercial de combustibles.",
-    modal_petro_val2_title: "Análisis Comparativo de Operadoras",
-    modal_petro_val2_desc: "Facilita el análisis comparativo del rendimiento entre empresas públicas y privadas en el sector hidrocarburífero argentino."
+    modal_petro_step4_title: "Métricas y campos calculados",
+    modal_petro_step4_desc: "Creación de indicadores mediante SQL en BigQuery y campos calculados en Looker Studio para analizar variaciones interanuales (YoY), acumulados anuales (YTD) y participación de la producción no convencional."
   },
   en: {
     meta_description: "Professional Data Analyst Portfolio. Projects, skills, and contact information.",
@@ -399,16 +394,11 @@ const i18nTranslations = {
     modal_petro_step2_title: "Cleaning & ETL in Python",
     modal_petro_step2_desc: "Normalization of field names, null values handling, standardization of measurement units (Mm3/day for gas and m3/day for oil).",
     modal_petro_step3_badge: "Step 3",
-    modal_petro_step3_title: "Data Modeling",
-    modal_petro_step3_desc: "Star Schema modeling in Power BI connecting Fact tables (Monthly Production) with Dimension tables (Companies, Basins, Fields, Geographic Location).",
+    modal_petro_step3_title: "Data modeling and structure",
+    modal_petro_step3_desc: "Designing a data structure in Looker Studio that relates production information to company, field, and geographic location dimensions.",
     modal_petro_step4_badge: "Step 4",
-    modal_petro_step4_title: "DAX Measures",
-    modal_petro_step4_desc: "Creation of dynamic DAX measures for Year-over-Year (YoY) variations, Year-to-Date (YTD) metrics, and unconventional market share percentages.",
-    modal_petro_sec_value: "Business Value & Conclusions",
-    modal_petro_val1_title: "Energy Sovereignty Impact",
-    modal_petro_val1_desc: "Provides evaluation of strategic investments in Vaca Muerta regarding energy sovereignty and fuel trade balance.",
-    modal_petro_val2_title: "Operators Comparative Analysis",
-    modal_petro_val2_desc: "Enables comparative performance benchmarking between state-owned and private corporations in the Argentine hydrocarbon sector."
+    modal_petro_step4_title: "Metrics and calculated fields",
+    modal_petro_step4_desc: "Creating indicators with SQL in BigQuery and calculated fields in Looker Studio to analyze year-over-year (YoY) changes, year-to-date (YTD) totals, and unconventional production share."
   }
 };
 
