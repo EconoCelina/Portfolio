@@ -52,7 +52,7 @@ const i18nTranslations = {
     about_card2_title: "Data & Business Intelligence",
     about_card2_desc: "A partir de herramientas como Python, SQL, R y Power BI, transformo datos en información útil mediante procesos de limpieza, análisis, visualización y construcción de KPIs, buscando responder preguntas concretas y facilitar la toma de decisiones.",
     about_card3_title: "Tecnología",
-    about_card3_desc: "Me interesa especialmente cómo los avances tecnológicos están transformando la forma en que recopilamos, analizamos e interpretamos información, y cómo estas herramientas pueden potenciar el análisis económico.",
+    about_card3_desc: "Me interesa la aplicación de nuevas tecnologías al análisis de datos y cómo la automatización y las herramientas digitales permiten optimizar procesos y ampliar las posibilidades del análisis.",
 
     // Skills Section
     skills_subtitle: "Stack Tecnológico",
@@ -452,6 +452,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initSmoothScrollAndActiveNav();
   initProjectFilters();
+  initProjectAccordion();
   initContactForm();
   initDynamicYear();
   initProjectModals();
@@ -730,7 +731,7 @@ function initProjectFilters() {
         const cardCategory = card.getAttribute('data-category');
 
         if (filterValue === 'all' || cardCategory === filterValue) {
-          card.style.display = 'flex';
+          card.style.display = 'block';
           card.style.opacity = '1';
           card.style.transform = 'scale(1)';
         } else {
@@ -738,6 +739,19 @@ function initProjectFilters() {
           card.style.opacity = '0';
           card.style.transform = 'scale(0.95)';
         }
+      });
+    });
+  });
+}
+
+function initProjectAccordion() {
+  const projectCards = document.querySelectorAll('#projects .project-card');
+
+  projectCards.forEach(card => {
+    card.addEventListener('toggle', () => {
+      if (!card.open) return;
+      projectCards.forEach(otherCard => {
+        if (otherCard !== card) otherCard.open = false;
       });
     });
   });

@@ -114,11 +114,7 @@
           <div class="about-copy">
             <div class="about-card glass-card">
               <div class="about-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="16 18 22 12 16 6"></polyline>
-                  <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
+                <img src="assets/economic.png" alt="" aria-hidden="true">
               </div>
               <h3 data-i18n="about_card1_title">Perspectiva Económica</h3>
               <p data-i18n="about_card1_desc">
@@ -147,13 +143,7 @@
 
             <div class="about-card glass-card">
               <div class="about-icon icon-purple">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-                  <line x1="9" y1="9" x2="9.01" y2="9"></line>
-                  <line x1="15" y1="9" x2="15.01" y2="9"></line>
-                </svg>
+                <img src="assets/technology.png" alt="" aria-hidden="true">
               </div>
               <h3 data-i18n="about_card3_title">Tecnología</h3>
               <p data-i18n="about_card3_desc">
@@ -199,48 +189,35 @@
         <div class="projects-grid" id="projects-grid">
 
           <!-- Proyecto 1: Limpieza & Transformación de Datos -->
-          <article class="project-card glass-card" data-category="cleaning">
-            <div class="project-image-container">
-              <div class="project-illustration illustration-cleaning">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" width="100%" height="100%">
-                  <rect width="400" height="220" fill="url(#cleanGrad)" />
-                  <defs>
-                    <linearGradient id="cleanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stop-color="#0f172a" />
-                      <stop offset="100%" stop-color="#134e4a" />
-                    </linearGradient>
-                  </defs>
-                  <!-- Data cleaning / filtering visual -->
-                  <!-- Raw dirty data block -->
-                  <rect x="45" y="50" width="95" height="120" rx="8" fill="#1e293b" stroke="#f43f5e" stroke-width="2"
-                    opacity="0.85" />
-                  <line x1="60" y1="75" x2="125" y2="75" stroke="#f43f5e" stroke-width="3" stroke-dasharray="4,4" />
-                  <line x1="60" y1="95" x2="115" y2="95" stroke="#f43f5e" stroke-width="3" />
-                  <line x1="60" y1="115" x2="125" y2="115" stroke="#f43f5e" stroke-width="3" stroke-dasharray="2,2" />
-                  <line x1="60" y1="135" x2="105" y2="135" stroke="#f43f5e" stroke-width="3" />
-
-                  <!-- Funnel / Filter Process -->
-                  <polygon points="160,60 220,60 200,120 180,120" fill="#0d9488" opacity="0.85" />
-                  <path d="M 190 120 L 190 150" stroke="#2dd4bf" stroke-width="4" stroke-linecap="round" />
-                  <circle cx="190" cy="90" r="10" fill="#2dd4bf" />
-
-                  <!-- Clean purified data block -->
-                  <rect x="255" y="50" width="100" height="120" rx="8" fill="#064e3b" stroke="#10b981"
-                    stroke-width="2" />
-                  <line x1="270" y1="75" x2="340" y2="75" stroke="#34d399" stroke-width="3" stroke-linecap="round" />
-                  <line x1="270" y1="95" x2="340" y2="95" stroke="#34d399" stroke-width="3" stroke-linecap="round" />
-                  <line x1="270" y1="115" x2="340" y2="115" stroke="#34d399" stroke-width="3" stroke-linecap="round" />
-                  <line x1="270" y1="135" x2="340" y2="135" stroke="#34d399" stroke-width="3" stroke-linecap="round" />
-                  <!-- Checkmark on clean data -->
-                  <circle cx="340" cy="50" r="14" fill="#10b981" />
-                  <path d="M 334 50 L 338 54 L 346 46" fill="none" stroke="#ffffff" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+          <details class="project-card glass-card" data-category="cleaning" open>
+            <summary class="project-summary">
+              <span class="project-number">01</span>
+              <h3 class="project-title" data-i18n="p1_title">Limpieza & Normalización de Datasets</h3>
+              <span class="project-summary-category" data-i18n="tag_cleaning">Limpieza de Datos</span>
+            </summary>
+            <div class="project-expanded">
+            <div class="project-image-container etl-image-container">
+              <div class="project-illustration etl-cover" role="img" aria-label="Flujo ETL de los datos de Santa Fe">
+                <div class="etl-cover-flow">
+                  <div class="etl-cover-step">81 archivos Excel</div>
+                  <span class="etl-cover-arrow" aria-hidden="true"></span>
+                  <div class="etl-cover-step">Extracción con Python</div>
+                  <span class="etl-cover-arrow" aria-hidden="true"></span>
+                  <div class="etl-cover-step">Limpieza y normalización</div>
+                  <span class="etl-cover-arrow" aria-hidden="true"></span>
+                  <div class="etl-cover-step">Filtrado por localidad y empresa</div>
+                  <span class="etl-cover-arrow" aria-hidden="true"></span>
+                  <div class="etl-cover-step">Validación y eliminación de duplicados</div>
+                  <span class="etl-cover-arrow" aria-hidden="true"></span>
+                  <div class="etl-cover-step">Clasificación NCM</div>
+                  <span class="etl-cover-arrow" aria-hidden="true"></span>
+                  <div class="etl-cover-step">Base consolidada</div>
+                  <span class="etl-cover-arrow" aria-hidden="true"></span>
+                  <div class="etl-cover-step">Análisis y Power BI</div>
+                </div>
               </div>
-              <span class="project-category-tag" data-i18n="tag_cleaning">Limpieza de Datos</span>
             </div>
             <div class="project-content">
-              <h3 class="project-title" data-i18n="p1_title">Limpieza & Normalización de Datasets</h3>
               <p class="project-description" data-i18n="p1_desc">
                 Pipeline automatizado para depuración, detección de valores nulos/anómalos, reconocimiento de
                 localidades y empresas utilizando Python (Pandas y Numpy).
@@ -273,10 +250,17 @@
                 </a>
               </div>
             </div>
-          </article>
+            </div>
+          </details>
 
           <!-- Proyecto 2: Análisis de la Industria Hidrocarburífera (Petróleo & Gas) -->
-          <article class="project-card glass-card" data-category="data">
+          <details class="project-card glass-card" data-category="data">
+            <summary class="project-summary">
+              <span class="project-number">02</span>
+              <h3 class="project-title" data-i18n="p2_title">Análisis de la Producción de Gas en Argentina</h3>
+              <span class="project-summary-category" data-i18n="tag_data_bi">Análisis de Datos & BI</span>
+            </summary>
+            <div class="project-expanded">
             <div class="project-image-container">
               <div class="project-illustration illustration-petroleum">
                 <img class="project-cover-image" src="assets/dashboard_gas.jpeg"
@@ -296,10 +280,8 @@
                   <circle cx="280" cy="70" r="6" fill="#93c5fd" />
                 </svg>
               </div>
-              <span class="project-category-tag" data-i18n="tag_data_bi">Análisis de Datos & BI</span>
             </div>
             <div class="project-content">
-              <h3 class="project-title" data-i18n="p2_title">Análisis de la Producción de Gas en Argentina</h3>
               <p class="project-description" data-i18n="p2_desc">
                 Estudio económico y visualización interactiva sobre la evolución de la producción de gas en Argentina,
                 enfocado en el impacto de Vaca Muerta y el perfil de las empresas operadoras.
@@ -331,8 +313,15 @@
                 </a>
               </div>
             </div>
-          </article>
-          <article class="project-card glass-card" data-category="data">
+            </div>
+          </details>
+          <details class="project-card glass-card" data-category="data">
+            <summary class="project-summary">
+              <span class="project-number">03</span>
+              <h3 class="project-title" data-i18n="p4_title">Pipeline ETL & Análisis de Tendencias de Mercado</h3>
+              <span class="project-summary-category" data-i18n="tag_data">Análisis de Datos</span>
+            </summary>
+            <div class="project-expanded">
             <div class="project-image-container">
               <div class="project-cover cover-etl">
                 <div class="etl-node">CSV</div>
@@ -341,16 +330,16 @@
                 <div class="etl-line"></div>
                 <div class="etl-node">SQL</div>
                 <div class="etl-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-              </div><span class="project-category-tag" data-i18n="tag_data">Análisis de Datos</span>
+              </div>
             </div>
             <div class="project-content">
-              <h3 class="project-title" data-i18n="p4_title">Pipeline ETL & Análisis de Tendencias de Mercado</h3>
               <p class="project-description" data-i18n="p4_desc">Extracción automatizada, limpieza y análisis de
                 tendencias con reportes dinámicos.</p>
               <div class="project-techs"><span class="tag">Python</span><span class="tag">SQLAlchemy</span><span
                   class="tag">ETL</span></div>
             </div>
-          </article>
+            </div>
+          </details>
 
         </div>
       </div>
