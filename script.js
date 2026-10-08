@@ -103,8 +103,6 @@ const i18nTranslations = {
     contact_email_label: "Correo Electrónico",
     contact_location_label: "Ubicación",
     contact_location_val: "Disponible para trabajar en CABA · híbrido o remoto",
-    contact_whatsapp_label: "WhatsApp",
-    contact_whatsapp_cta: "Enviar mensaje",
     social_title: "Sígueme en Redes",
 
     label_name: "Nombre Completo",
@@ -356,8 +354,6 @@ const i18nTranslations = {
     contact_email_label: "Email Address",
     contact_location_label: "Location",
     contact_location_val: "Available to work in Buenos Aires (CABA) · hybrid or remote",
-    contact_whatsapp_label: "WhatsApp",
-    contact_whatsapp_cta: "Send a message",
     social_title: "Follow Me",
 
     label_name: "Full Name",
