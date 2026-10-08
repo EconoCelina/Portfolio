@@ -98,14 +98,13 @@ const i18nTranslations = {
 
     // Contact Section
     contact_subtitle: "¿Tienes un proyecto en mente?",
-    contact_title: "Hablemos y Hagámoslo Realidad",
+    contact_title: "Trabajemos Juntos",
     contact_info_subtitle: "Información de Contacto",
-    contact_info_text: "Estoy abierto a oportunidades laborales, proyectos freelance o colaboraciones de ciencia/análisis de datos.",
     contact_email_label: "Correo Electrónico",
     contact_location_label: "Ubicación",
     contact_location_val: "Disponible Presencial / Remoto / Híbrido",
-    contact_avail_label: "Disponibilidad",
-    contact_avail_val: "Respuesta en < 24 Horas",
+    contact_whatsapp_label: "WhatsApp",
+    contact_whatsapp_cta: "Enviar mensaje",
     social_title: "Sígueme en Redes",
 
     label_name: "Nombre Completo",
@@ -352,14 +351,13 @@ const i18nTranslations = {
 
     // Contact Section
     contact_subtitle: "Have a project in mind?",
-    contact_title: "Let's Talk & Make It Happen",
+    contact_title: "Let's Work Together",
     contact_info_subtitle: "Contact Information",
-    contact_info_text: "I am open to job opportunities, freelance projects, or data science & analytics collaborations.",
     contact_email_label: "Email Address",
     contact_location_label: "Location",
     contact_location_val: "Available On-site / Remote / Hybrid",
-    contact_avail_label: "Availability",
-    contact_avail_val: "Response in < 24 Hours",
+    contact_whatsapp_label: "WhatsApp",
+    contact_whatsapp_cta: "Send a message",
     social_title: "Follow Me",
 
     label_name: "Full Name",
@@ -877,6 +875,15 @@ function initProjectAccordion() {
       projectCards.forEach(otherCard => {
         if (otherCard !== card) otherCard.open = false;
       });
+
+      if (window.matchMedia('(max-width: 1100px)').matches) {
+        window.requestAnimationFrame(() => {
+          card.querySelector('.project-summary')?.scrollIntoView({
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+            block: 'start'
+          });
+        });
+      }
     });
   });
 }

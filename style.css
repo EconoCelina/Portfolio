@@ -2526,6 +2526,7 @@ body { background-color:var(--bg-main); }
   line-height:1;
 }
 #projects .project-card[open] .project-summary::after { content:'−'; }
+#projects .project-card:not([open]) > .project-expanded { display:none; }
 #projects .project-expanded {
   display:grid;
   grid-template-columns:minmax(0,1fr) minmax(0,.95fr);
@@ -2691,14 +2692,26 @@ body { background-color:var(--bg-main); }
 #projects .project-cover-image,
 #projects .project-cover-fallback { object-fit:cover; }
 
-@media (max-width:900px) {
+@media (max-width:1100px) {
   #projects .projects-grid { flex-direction:column; min-height:0; }
   #projects .project-card,
   #projects .project-card:last-child {
     flex:0 0 auto;
     min-width:0;
     min-height:0;
+    height:auto;
+    overflow:visible;
     border-radius:16px;
+  }
+  #projects .project-card[open] {
+    flex:0 0 auto;
+    width:100%;
+    max-width:920px;
+    margin-inline:auto;
+    border:1px solid #d0d0ce;
+    border-radius:16px;
+    color:#171717;
+    background:#f1f1f0;
   }
   #projects .project-summary {
     display:grid;
@@ -2707,6 +2720,7 @@ body { background-color:var(--bg-main); }
     height:auto;
     min-height:82px;
     padding:16px 18px;
+    scroll-margin-top:88px;
   }
   #projects .project-number,
   #projects .project-summary .project-title { position:static; width:auto; max-width:none; transform:none; }
@@ -2720,12 +2734,15 @@ body { background-color:var(--bg-main); }
   #projects .project-card[open] .project-summary-category { grid-column:2; grid-row:2; }
   #projects .project-summary::after { grid-column:3; grid-row:1 / span 2; }
   #projects .project-expanded {
+    display:grid;
+    width:100%;
     min-height:0;
     grid-template-columns:1fr;
     gap:24px;
     padding:12px 18px 24px;
+    background:#f1f1f0;
   }
-  #projects .project-content { grid-column:1; grid-row:1; }
+  #projects .project-content { grid-column:1; grid-row:1; min-width:0; }
   #projects .project-image-container {
     grid-column:1;
     grid-row:2;
@@ -2737,7 +2754,7 @@ body { background-color:var(--bg-main); }
 }
 
 /* Keep the project showcase compact on large desktop viewports. */
-@media (min-width:901px) {
+@media (min-width:1101px) {
   #projects .projects-grid {
     width:100%;
     max-width:1120px;
@@ -3070,6 +3087,21 @@ body { background-color:var(--bg-main); }
 #contact .contact-value { color:#f5f5f5; }
 #contact .contact-icon { color:#f2f2f2; background:#303030; }
 #contact .contact-text { color:#bcbcbc; }
+.contact-title-row { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
+.contact-title-row .section-title { margin:0; }
+.contact-handshake {
+  width:clamp(145px,14vw,180px);
+  height:clamp(145px,14vw,180px);
+  flex:0 0 auto;
+  border:0;
+  object-fit:cover;
+  mix-blend-mode:screen;
+}
+@media (max-width:600px) {
+  .contact-title-row { gap:8px; }
+  .contact-title-row .section-title { font-size:clamp(1.25rem,6vw,2rem); }
+  .contact-handshake { width:120px; height:120px; }
+}
 
 /* Billing automation cover and case study, matched to the portfolio's grayscale cards. */
 #projects .billing-cover {
